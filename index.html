@@ -1,0 +1,1944 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="//cdn.hstatic.net/themes/200000978078/1001412493/14/favicon.png?v=330" type="image/png" />
+    <title>HAPAS - Thương Hiệu Túi Xách Cao Cấp</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        rose: { 50: '#FFF1F2', 100: '#FFE4E6', 200: '#FECDD3', 300: '#FDA4AF', 400: '#FB7185', 500: '#F43F5E', 600: '#E11D48' },
+                        fuchsia: { 50: '#FDF4FF', 100: '#FAE8FF', 200: '#F5D0FE', 300: '#F0ABFC', 400: '#E879F9', 500: '#D946EF' },
+                        coral: { 400: '#FF8A65', 500: '#FF7043' },
+                        lavender: { 400: '#B388FF', 500: '#9C5CFF' },
+                        peach: { 400: '#FFAB91', 500: '#FF8A65' },
+                    },
+                    fontFamily: {
+                        display: ['Playfair Display', 'serif'],
+                        body: ['Quicksand', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { font-family: 'Quicksand', sans-serif; scroll-behavior: smooth; }
+        .font-display { font-family: 'Playfair Display', serif; }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #FFF0F5; }
+        ::-webkit-scrollbar-thumb { background: linear-gradient(#FF6B9D, #E91E6C); border-radius: 10px; }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(3deg); }
+        }
+        @keyframes floatReverse {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(20px) rotate(-3deg); }
+        }
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        @keyframes pulse-pink {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(255, 107, 138, 0.4); }
+            50% { box-shadow: 0 0 0 20px rgba(255, 107, 138, 0); }
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(60px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        @keyframes blob {
+            0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+            50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+        }
+        .float-animation { animation: float 6s ease-in-out infinite; }
+        .float-reverse-animation { animation: floatReverse 7s ease-in-out infinite; }
+        .blob-animation { animation: blob 8s ease-in-out infinite; }
+        .shimmer-bg {
+            background: linear-gradient(90deg, #FF6B8A, #E879F9, #FB7185, #FF6B8A);
+            background-size: 200% 100%;
+            animation: shimmer 3s linear infinite;
+        }
+        .pulse-pink { animation: pulse-pink 2s infinite; }
+        
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .blob {
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            animation: blobMorph 8s ease-in-out infinite;
+        }
+        @keyframes blobMorph {
+            0%, 100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+            25% { border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%; }
+            50% { border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%; }
+            75% { border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%; }
+        }
+
+        .trust-card { transition: all 0.4s cubic-bezier(0.16,1,0.3,1); }
+        .trust-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(255,107,138,0.15); }
+
+        .process-step { transition: all 0.4s ease; }
+        .process-step:hover .step-icon { transform: scale(1.15) rotate(5deg); }
+        .step-icon { transition: transform 0.4s cubic-bezier(0.16,1,0.3,1); }
+
+        .instagram-item { transition: all 0.5s cubic-bezier(0.16,1,0.3,1); }
+        .instagram-item:hover { transform: scale(1.05); z-index: 10; }
+        .instagram-item:hover .ig-overlay { opacity: 1; }
+        .ig-overlay { opacity: 0; transition: opacity 0.3s ease; }
+
+        /* Product card hover */
+        .product-card {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .product-card:hover {
+            transform: translateY(-8px);
+        }
+        .product-card:hover .product-img {
+            transform: scale(1.08);
+        }
+        .product-card:hover .product-overlay {
+            opacity: 1;
+        }
+        .product-card .product-img {
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .product-card .product-overlay {
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        /* Nav glass */
+        .nav-glass {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(135deg, #FF3D6B, #E879F9, #FF6B8A);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Category card */
+        .category-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 60%);
+            z-index: 1;
+            border-radius: inherit;
+            transition: all 0.4s ease;
+        }
+        .category-card:hover::before {
+            background: linear-gradient(to top, rgba(255,61,107,0.7) 0%, rgba(232,121,249,0.3) 100%);
+        }
+
+        /* Marquee */
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .marquee-track {
+            animation: marquee 30s linear infinite;
+        }
+
+        /* Toast */
+        .toast {
+            animation: slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .toast-exit {
+            animation: fadeOut 0.3s ease forwards;
+        }
+        @keyframes fadeOut {
+            to { opacity: 0; transform: translateY(-20px); }
+        }
+
+        /* Mobile menu */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+
+        /* Quick view modal */
+        .modal-overlay {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+        .modal-content {
+            transform: scale(0.9) translateY(20px);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .modal-overlay.active .modal-content {
+            transform: scale(1) translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-pink-50 text-gray-800 overflow-x-hidden">
+
+    <!-- Toast Container -->
+    <div id="toast-container" class="fixed top-24 right-4 z-[100] flex flex-col gap-3"></div>
+
+    <!-- Announcement Bar -->
+    <!-- <div class="shimmer-bg text-white text-center py-2 text-sm font-semibold tracking-wide relative overflow-hidden">
+        <div class="flex items-center justify-center gap-2">
+            <i data-lucide="sparkles" class="w-4 h-4"></i>
+            <span> MIỄN PHÍ VẬN CHUYỂN CHO ĐƠN HÀNG TỪ 500K </span>
+            <i data-lucide="sparkles" class="w-4 h-4"></i>
+        </div>
+    </div> -->
+
+    <!-- Navigation -->
+    <nav id="navbar" class="sticky top-0 z-50 nav-glass bg-white/80 border-b border-pink-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 lg:h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-2 group">
+                    <img src="//cdn.hstatic.net/themes/200000978078/1001412493/14/favicon.png?v=330" alt="HAPAS Logo" class="w-10 h-10 rounded-xl object-cover shadow-lg shadow-pink-300/50 group-hover:shadow-pink-400/60 transition-shadow">
+                    <span class="font-display text-2xl font-bold gradient-text">HAPAS</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="#home" class="text-gray-700 hover:text-pink-500 font-medium transition-colors relative group">
+                        Trang Chủ
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-pink-500 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="#about" class="text-gray-700 hover:text-pink-500 font-medium transition-colors relative group">
+                        Về Chúng Tôi
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-pink-500 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="#products" class="text-gray-700 hover:text-pink-500 font-medium transition-colors relative group">
+                        Sản Phẩm
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-pink-500 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="#collections" class="text-gray-700 hover:text-pink-500 font-medium transition-colors relative group">
+                        Bộ Sưu Tập
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-pink-500 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="#reviews" class="text-gray-700 hover:text-pink-500 font-medium transition-colors relative group">
+                        Đánh Giá
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-pink-500 transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="#contact" class="text-gray-700 hover:text-pink-500 font-medium transition-colors relative group">
+                        Liên Hệ
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-pink-500 transition-all group-hover:w-full"></span>
+                    </a>
+                </div>
+
+                <!-- Actions -->
+                <div class="flex items-center gap-3">
+                    <button onclick="toggleSearch()" class="p-2 rounded-full hover:bg-pink-100 transition-colors text-gray-600 hover:text-pink-500">
+                        <i data-lucide="search" class="w-5 h-5"></i>
+                    </button>
+                    <button class="p-2 rounded-full hover:bg-pink-100 transition-colors text-gray-600 hover:text-pink-500 hidden sm:block">
+                        <i data-lucide="heart" class="w-5 h-5"></i>
+                    </button>
+                    <button onclick="toggleCart()" class="p-2 rounded-full hover:bg-pink-100 transition-colors text-gray-600 hover:text-pink-500 relative">
+                        <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                        <span id="cart-count" class="absolute -top-1 -right-1 w-5 h-5 bg-gradient-to-r from-pink-500 to-fuchsia-500 text-white text-xs rounded-full flex items-center justify-center font-bold">0</span>
+                    </button>
+                    <button onclick="toggleMobileMenu()" class="p-2 rounded-full hover:bg-pink-100 transition-colors text-gray-600 hover:text-pink-500 lg:hidden">
+                        <i data-lucide="menu" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search Bar -->
+        <div id="search-bar" class="hidden border-t border-pink-100 bg-white/90">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+                <div class="flex items-center gap-3">
+                    <i data-lucide="search" class="w-5 h-5 text-pink-400"></i>
+                    <input id="search-input" type="text" placeholder="Tìm kiếm túi xách..." oninput="handleSearch(this.value)" class="flex-1 bg-transparent outline-none text-gray-700 placeholder-pink-300 font-body">
+                    <button onclick="toggleSearch()" class="text-pink-400 hover:text-pink-600">
+                        <i data-lucide="x" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed inset-y-0 right-0 w-80 max-w-full bg-white z-[60] shadow-2xl">
+        <div class="p-6">
+            <div class="flex items-center justify-between mb-8">
+                <span class="font-display text-xl font-bold gradient-text">Menu</span>
+                <button onclick="toggleMobileMenu()" class="w-10 h-10 flex items-center justify-center rounded-full bg-pink-50 hover:bg-pink-100 transition-colors">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <div class="flex flex-col gap-4">
+                <a href="#home" onclick="toggleMobileMenu()" class="text-lg font-medium text-gray-700 hover:text-pink-500 py-2 border-b border-pink-50 transition-colors">Trang Chủ</a>
+                <a href="#about" onclick="toggleMobileMenu()" class="text-lg font-medium text-gray-700 hover:text-pink-500 py-2 border-b border-pink-50 transition-colors">Về Chúng Tôi</a>
+                <a href="#products" onclick="toggleMobileMenu()" class="text-lg font-medium text-gray-700 hover:text-pink-500 py-2 border-b border-pink-50 transition-colors">Sản Phẩm</a>
+                <a href="#collections" onclick="toggleMobileMenu()" class="text-lg font-medium text-gray-700 hover:text-pink-500 py-2 border-b border-pink-50 transition-colors">Bộ Sưu Tập</a>
+                <a href="#reviews" onclick="toggleMobileMenu()" class="text-lg font-medium text-gray-700 hover:text-pink-500 py-2 border-b border-pink-50 transition-colors">Đánh Giá</a>
+                <a href="#contact" onclick="toggleMobileMenu()" class="text-lg font-medium text-gray-700 hover:text-pink-500 py-2 border-b border-pink-50 transition-colors">Liên Hệ</a>
+            </div>
+            <div class="mt-8 p-5 rounded-2xl bg-gradient-to-br from-pink-100 via-fuchsia-50 to-lavender-400/20 border border-pink-200">
+                <p class="font-semibold text-pink-600 mb-2">🎁 Ưu đãi đặc biệt</p>
+                <p class="text-sm text-gray-600">Giảm 20% cho khách hàng mới với mã <span class="font-bold text-pink-500">HAPAS20</span></p>
+            </div>
+        </div>
+    </div>
+    <div id="mobile-overlay" class="fixed inset-0 bg-black/30 z-[55] hidden" onclick="toggleMobileMenu()"></div>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar" class="mobile-menu fixed inset-y-0 right-0 w-96 max-w-full bg-white z-[60] shadow-2xl flex flex-col">
+        <div class="p-6 border-b border-pink-100">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                    <span class="font-display text-xl font-bold gradient-text">Giỏ Hàng</span>
+                    <span id="cart-sidebar-count" class="text-sm text-gray-400">(0)</span>
+                </div>
+                <button onclick="toggleCart()" class="p-2 rounded-full hover:bg-pink-100 text-gray-600"><i data-lucide="x" class="w-5 h-5"></i></button>
+            </div>
+        </div>
+        <div id="cart-items" class="flex-1 overflow-y-auto p-6">
+            <div id="cart-empty" class="flex flex-col items-center justify-center h-full text-center">
+                <div class="w-24 h-24 rounded-full bg-gradient-to-br from-pink-100 to-fuchsia-100 flex items-center justify-center mb-4">
+                    <i data-lucide="shopping-bag" class="w-10 h-10 text-pink-300"></i>
+                </div>
+                <p class="text-gray-500 font-semibold text-lg">Giỏ hàng trống</p>
+                <p class="text-sm text-gray-400 mt-1">Hãy thêm sản phẩm yêu thích!</p>
+            </div>
+            <div id="cart-list" class="hidden flex flex-col gap-4"></div>
+        </div>
+        <div id="cart-footer" class="hidden border-t border-pink-100 p-6 bg-gradient-to-t from-pink-50 to-white">
+            <div class="mb-4">
+                <label for="coupon-code-input" class="block text-sm font-semibold text-gray-700 mb-2">Mã giảm giá</label>
+                <div class="flex gap-2">
+                    <input id="coupon-code-input" type="text" placeholder="Nhập mã (vd: HAPAS20)" class="flex-1 px-3 py-2.5 rounded-xl border border-pink-200 outline-none focus:border-pink-400 text-sm">
+                    <button onclick="applyCouponCode()" class="px-4 py-2.5 rounded-xl bg-white border border-pink-300 text-pink-500 font-semibold text-sm hover:bg-pink-50 transition-colors">
+                        Áp dụng
+                    </button>
+                </div>
+                <p id="coupon-message" class="text-xs mt-2 hidden"></p>
+            </div>
+            <div class="flex justify-between mb-2 text-sm text-gray-500">
+                <span>Tạm tính:</span>
+                <span id="cart-subtotal">0₫</span>
+            </div>
+            <div id="cart-discount-row" class="hidden justify-between mb-2 text-sm text-green-600">
+                <span>Giảm giá:</span>
+                <span id="cart-discount">-0₫</span>
+            </div>
+            <div class="flex justify-between mb-4">
+                <span class="font-bold text-gray-700">Tổng cộng:</span>
+                <span id="cart-total" class="font-bold text-xl gradient-text">0₫</span>
+            </div>
+            <button onclick="openCheckout()" class="w-full py-3.5 rounded-xl shimmer-bg text-white font-bold shadow-lg shadow-pink-300/40 hover:shadow-pink-400/60 transition-shadow flex items-center justify-center gap-2">
+                <i data-lucide="credit-card" class="w-5 h-5"></i>
+                Thanh Toán
+            </button>
+            <p class="text-center text-xs text-gray-400 mt-3">Thanh toán an toàn & bảo mật</p>
+        </div>
+    </div>
+    <div id="cart-overlay" class="fixed inset-0 bg-black/30 z-[55] hidden backdrop-blur-sm" onclick="toggleCart()"></div>
+
+    <div id="checkout-modal" class="modal-overlay fixed inset-0 bg-black/50 z-[80] flex items-center justify-center p-4">
+        <div class="modal-content bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 lg:p-8">
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="font-display text-3xl font-bold gradient-text">Thanh Toán</h3>
+                <button onclick="closeCheckout()" class="p-2 rounded-full hover:bg-pink-100 text-gray-500 hover:text-pink-500">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <div id="checkout-form-view">
+                <p class="text-gray-600 mb-6">Vui lòng nhập thông tin để giao hàng trước khi thanh toán.</p>
+                <form onsubmit="submitCheckoutInfo(event)" class="grid md:grid-cols-2 gap-4">
+                    <input id="checkout-name" type="text" required placeholder="Họ và tên" class="px-4 py-3 rounded-xl border border-pink-200 outline-none">
+                    <input id="checkout-phone" type="tel" required placeholder="Số điện thoại" class="px-4 py-3 rounded-xl border border-pink-200 outline-none">
+                    <textarea id="checkout-address" required rows="3" placeholder="Địa chỉ giao hàng" class="md:col-span-2 px-4 py-3 rounded-xl border border-pink-200 outline-none"></textarea>
+                    <button type="submit" class="md:col-span-2 py-3 rounded-xl shimmer-bg text-white font-bold">Tiếp tục đến thanh toán QR</button>
+                </form>
+            </div>
+            <div id="checkout-payment-view" class="hidden">
+                <p class="text-gray-600 mb-4">Quét mã QR để thanh toán trực tiếp.</p>
+                <div class="bg-pink-50 rounded-2xl border border-pink-100 p-5 mb-4">
+                    <div class="flex flex-col md:flex-row gap-5 md:items-center">
+                        <img id="checkout-qr" src="" alt="Mã QR thanh toán" class="w-52 h-52 rounded-xl border border-pink-200 bg-white p-2 object-contain mx-auto md:mx-0">
+                        <div class="space-y-2 text-gray-700">
+                            <p><span class="font-semibold">Khách hàng:</span> <span id="checkout-display-name">-</span></p>
+                            <p><span class="font-semibold">SĐT:</span> <span id="checkout-display-phone">-</span></p>
+                            <p><span class="font-semibold">Địa chỉ:</span> <span id="checkout-display-address">-</span></p>
+                            <p><span class="font-semibold">Tổng thanh toán:</span> <span id="checkout-display-total" class="font-bold text-pink-600">0₫</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <button onclick="showCheckoutForm()" class="flex-1 py-3 rounded-xl border border-pink-300 text-pink-500 font-semibold hover:bg-pink-50 transition-colors">Sửa thông tin</button>
+                    <button onclick="confirmDirectPayment()" class="flex-1 py-3 rounded-xl shimmer-bg text-white font-bold">Đã thanh toán</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center overflow-hidden">
+        <!-- Background -->
+        <div class="absolute inset-0 bg-gradient-to-br from-pink-50 via-white to-purple-50"></div>
+
+        <!-- Decorative Blobs -->
+        <div class="absolute top-20 -left-32 w-96 h-96 bg-gradient-to-br from-pink-300/40 to-fuchsia-300/30 rounded-full blur-3xl blob-animation"></div>
+        <div class="absolute bottom-10 -right-32 w-80 h-80 bg-gradient-to-br from-rose-300/30 to-pink-300/40 rounded-full blur-3xl blob-animation" style="animation-delay: -4s;"></div>
+        <div class="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-br from-fuchsia-200/20 to-pink-200/20 rounded-full blur-2xl blob-animation" style="animation-delay: -2s;"></div>
+        <div class="absolute top-20 -left-32 w-96 h-96 bg-pink-200/30 blob animate-float"></div>
+        <div class="absolute bottom-10 -right-32 w-80 h-80 bg-purple-200/30 blob animate-float-delay"></div>
+        <div class="absolute top-1/2 left-1/3 w-64 h-64 bg-orange-100/30 blob animate-float-slow"></div>
+        <div class="absolute top-32 right-1/4 w-20 h-20 bg-pink-300/40 rounded-full animate-bounce-soft"></div>
+        <div class="absolute bottom-32 left-1/4 w-14 h-14 bg-lavender/50 rounded-full animate-bounce-soft" style="animation-delay: 0.5s"></div>
+        <div class="absolute top-1/3 right-16 w-10 h-10 bg-peach/60 rounded-full animate-bounce-soft" style="animation-delay: 1s"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-0 w-full">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Text Content -->
+                <div class="relative z-10 order-2 lg:order-1">
+                    <div class="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm rounded-full px-5 py-2.5 border border-pink-200 mb-6 shadow-lg shadow-pink-200/30">
+                        <span class="flex h-2.5 w-2.5 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-pink-500"></span></span>
+                        <span class="text-sm font-bold text-pink-600">Bộ sưu tập mới 2026</span>
+                    </div>
+                    <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+                        <span class="text-gray-800">Phong Cách</span><br>
+                        <span class="gradient-text">Rạng Rỡ</span><br>
+                        <span class="text-gray-800">Của Bạn</span>
+                    </h1>
+                    <p class="text-gray-600 text-lg max-w-md mb-8 leading-relaxed">
+                        Khám phá bộ sưu tập túi xách cao cấp — nơi phong cách gặp gỡ sự tinh tế, hoàn thiện vẻ đẹp của mọi phái đẹp.
+                    </p>
+                    <div class="animate-slide-up-delay2 flex flex-wrap gap-4">
+                        <a href="#products" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl shimmer-bg text-white font-bold shadow-lg shadow-pink-300/40 hover:shadow-pink-400/60 transition-all hover:-translate-y-1">
+                            Mua Ngay
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#about" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-white text-pink-600 font-bold border-2 border-pink-200 hover:border-pink-400 hover:bg-pink-50 transition-all hover:-translate-y-1">
+                            <iconify-icon icon="lucide:play-circle" width="18"></iconify-icon>
+                            Câu chuyện thương hiệu
+                        </a>
+                    </div>
+                    <!-- Stats -->
+                    <div class="flex gap-8 mt-12">
+                        <div>
+                            <div class="text-2xl md:text-3xl font-bold gradient-text">500+</div>
+                            <div class="text-xs text-gray-400 mt-1">Mẫu túi xách</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl md:text-3xl font-bold gradient-text">50K+</div>
+                            <div class="text-xs text-gray-400 mt-1">Khách hàng tin tưởng</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl md:text-3xl font-bold gradient-text">4.9★</div>
+                            <div class="text-xs text-gray-400 mt-1">Đánh giá trung bình</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image -->
+                <div class="relative order-1 lg:order-2 flex justify-center">
+                    <div class="relative">
+                        <!-- Main Image -->
+                        <div class="relative z-10 w-72 sm:w-80 lg:w-96 h-96 lg:h-[500px] rounded-3xl overflow-hidden shadow-2xl shadow-pink-300/30 float-animation">
+                            <img src="https://cdn.hstatic.net/themes/200000978078/1001412493/14/slide_1_img.jpg?v=330" alt="duyvinh09" class="w-full h-full object-cover">
+                        </div>
+                        <!-- Decorative elements -->
+                        <div class="absolute -top-3 -right-3 w-72 sm:w-80 lg:w-[420px] h-96 lg:h-[520px] rounded-[2rem] border-2 border-dashed border-pink-300/40 z-0"></div>
+                        <!-- Small floating card -->
+                        <div class="absolute -bottom-6 -left-6 sm:-left-12 z-20 bg-white rounded-2xl p-4 shadow-xl shadow-pink-200/40 float-reverse border border-pink-100">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-400 to-fuchsia-500 flex items-center justify-center shadow-md shadow-pink-300/30">
+                                    <i data-lucide="gem" class="w-6 h-6 text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-gray-800 text-sm">Chất lượng</p>
+                                    <p class="text-xs text-pink-500 font-semibold">Cao cấp nhất</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Price tag -->
+                        <div class="absolute -top-4 -left-4 sm:-left-10 z-20 bg-white rounded-2xl p-3 shadow-xl shadow-pink-200/40 float-animation border border-pink-100" style="animation-delay:-2s">
+                            <div class="flex items-center gap-2">
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-rose-400 to-pink-500 flex items-center justify-center text-white font-bold text-sm">
+                                    -30%
+                                </div>
+                                <div>
+                                    <p class="text-sm font-bold text-gray-700">Flash Sale</p>
+                                    <p class="text-xs text-gray-400">Hôm nay thôi!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Floating card: rating -->
+                        <div class="absolute top-8 -right-4 sm:-right-10 z-20 bg-white rounded-2xl p-3 shadow-xl shadow-pink-200/40 float-animation border border-pink-100" style="animation-delay:-4s">
+                            <div class="flex items-center gap-2">
+                                <div class="flex text-yellow-400 text-xs">★★★★★</div>
+                                <span class="text-xs font-bold text-gray-700">4.9</span>
+                            </div>
+                            <p class="text-[10px] text-gray-400 mt-0.5">2.3K đánh giá</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
+            <span class="text-xs text-gray-400 font-medium">Cuộn xuống</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-pink-400"></i>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="bg-gradient-to-r from-pink-500 via-fuchsia-500 to-rose-500 py-4 overflow-hidden">
+        <div class="flex whitespace-nowrap marquee-track">
+            <span class="flex items-center gap-8 px-4 text-white text-sm font-medium whitespace-nowrap">
+                <span class="flex items-center gap-2"><iconify-icon icon="lucide:sparkles" width="14"></iconify-icon> FREESHIP ĐƠN TỪ 500K</span>
+                <span class="flex items-center gap-2"><iconify-icon icon="lucide:shield-check" width="14"></iconify-icon> BẢO HÀNH 12 THÁNG</span>
+                <span class="flex items-center gap-2"><iconify-icon icon="lucide:refresh-ccw" width="14"></iconify-icon> ĐỔI TRẢ 30 NGÀY</span>
+                <span class="flex items-center gap-2"><iconify-icon icon="lucide:gift" width="14"></iconify-icon> QUÀ TẶNG ĐẶC BIỆT</span>
+                <span class="flex items-center gap-2"><iconify-icon icon="lucide:percent" width="14"></iconify-icon> GIẢM 20% ĐƠN ĐẦU TIÊN</span>
+                <span class="flex items-center gap-2"><iconify-icon icon="lucide:sparkles" width="14"></iconify-icon> FREESHIP ĐƠN TỪ 500K</span>
+                <span class="flex items-center gap-2"><iconify-icon icon="lucide:shield-check" width="14"></iconify-icon> BẢO HÀNH 12 THÁNG</span>
+                <span class="flex items-center gap-2"><iconify-icon icon="lucide:refresh-ccw" width="14"></iconify-icon> ĐỔI TRẢ 30 NGÀY</span>
+                <span class="flex items-center gap-2"><iconify-icon icon="lucide:gift" width="14"></iconify-icon> QUÀ TẶNG ĐẶC BIỆT</span>
+                <span class="flex items-center gap-2"><iconify-icon icon="lucide:percent" width="14"></iconify-icon> GIẢM 20% ĐƠN ĐẦU TIÊN</span>
+              </span>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 md:py-32 bg-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-72 h-72 bg-pink-50 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-purple-50 rounded-full translate-y-1/2 -translate-x-1/2"></div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <!-- Images -->
+            <div class="animate-on-scroll relative">
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <div class="rounded-2xl overflow-hidden h-48 shadow-lg">
+                            <img src="https://file.hstatic.net/200000978078/file/t_i_tr_ng_1024x1024.png" alt="" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700">
+                        </div>
+                        <div class="rounded-2xl overflow-hidden h-64 shadow-lg">
+                            <img src="https://file.hstatic.net/200000978078/file/_nh_1024x1024.png" alt="" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700">
+                        </div>
+                    </div>
+                    <div class="space-y-4 pt-8">
+                        <div class="rounded-2xl overflow-hidden h-64 shadow-lg">
+                            <img src="https://file.hstatic.net/200000978078/file/_nh__1__1024x1024.png" alt="" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700">
+                        </div>
+                        <div class="rounded-2xl overflow-hidden h-48 shadow-lg">
+                            <img src="https://file.hstatic.net/200000978078/article/chain_handle__3__7212e50d5fb04a58ab65b14a18d2859d_large.png" alt="" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700">
+                        </div>
+                    </div>
+                </div>
+                <!-- Experience badge -->
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-2xl p-6 shadow-xl shadow-pink-200/50 text-center pulse-pink z-10">
+                    <div class="font-display text-4xl font-bold gradient-text">10+</div>
+                    <div class="text-sm text-gray-600 font-medium">Năm kinh nghiệm</div>
+                </div>
+            </div>
+    
+            <!-- Text -->
+            <div class="animate-on-scroll">
+                <div class="inline-flex items-center gap-2 bg-gradient-to-r from-pink-100 to-fuchsia-100 rounded-full px-5 py-2 mb-5 border border-pink-200">
+                    <i data-lucide="heart" class="w-4 h-4 text-pink-500"></i>
+                    <span class="text-sm font-bold text-pink-600">Câu Chuyện Của Chúng Tôi</span>
+                </div>
+                <h2 class="font-display text-4xl lg:text-5xl font-bold text-gray-800 mb-6 leading-tight">
+                    Về <span class="gradient-text">HAPAS</span>
+                </h2>
+                <p class="text-gray-600 text-lg leading-relaxed mb-5">
+                    HAPAS ra đời với sứ mệnh mang đến cho phụ nữ Việt Nam những chiếc túi xách không chỉ là phụ kiện, mà còn là <span class="text-pink-500 font-semibold">biểu tượng của phong cách</span> và sự tự tin.
+                </p>
+                <p class="text-gray-500 leading-relaxed mb-8">
+                    Với hơn 10 năm kinh nghiệm, chúng tôi tự hào mang đến những sản phẩm được chế tác tỉ mỉ từ chất liệu cao cấp, kết hợp giữa nét truyền thống và xu hướng thời trang hiện đại. Mỗi chiếc túi là một câu chuyện, mỗi thiết kế là một tuyên ngôn về cái đẹp.
+                </p>
+              
+                <!-- Features -->
+                <div class="grid grid-cols-2 gap-4 mb-8">
+                    <div class="flex items-start gap-3 p-3 rounded-xl bg-pink-50/50">
+                        <div class="w-8 h-8 rounded-lg bg-pink-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <iconify-icon icon="lucide:leaf" width="16" class="text-pink-600"></iconify-icon>
+                        </div>
+                        <div>
+                            <div class="text-sm font-semibold text-gray-800">Da thật 100%</div>
+                            <div class="text-xs text-gray-400 mt-0.5">Nhập khẩu Ý</div>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3 p-3 rounded-xl bg-purple-50/50">
+                        <div class="w-8 h-8 rounded-lg bg-purple-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <iconify-icon icon="lucide:scissors" width="16" class="text-purple-600"></iconify-icon>
+                        </div>
+                        <div>
+                            <div class="text-sm font-semibold text-gray-800">Thủ công</div>
+                            <div class="text-xs text-gray-400 mt-0.5">Mỗi chi tiết tỉ mỉ</div>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3 p-3 rounded-xl bg-orange-50/50">
+                        <div class="w-8 h-8 rounded-lg bg-orange-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <iconify-icon icon="lucide:palette" width="16" class="text-orange-600"></iconify-icon>
+                        </div>
+                        <div>
+                            <div class="text-sm font-semibold text-gray-800">Đa dạng màu sắc</div>
+                            <div class="text-xs text-gray-400 mt-0.5">20+ tone màu</div>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3 p-3 rounded-xl bg-green-50/50">
+                        <div class="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <iconify-icon icon="lucide:recycle" width="16" class="text-green-600"></iconify-icon>
+                        </div>
+                        <div>
+                            <div class="text-sm font-semibold text-gray-800">Bền bỉ</div>
+                            <div class="text-xs text-gray-400 mt-0.5">Sử dụng 5-10 năm</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="collections" class="py-20 lg:py-28 bg-gradient-to-b from-pink-50/80 to-white relative overflow-hidden">
+        <div class="absolute top-0 left-1/2 w-[600px] h-[600px] bg-gradient-to-br from-pink-200/20 via-fuchsia-200/15 to-transparent rounded-full blur-3xl -translate-x-1/2"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-14 animate-on-scroll">
+                <div class="inline-flex items-center gap-2 bg-gradient-to-r from-pink-100 to-fuchsia-100 rounded-full px-5 py-2 mb-5 border border-pink-200">
+                    <i data-lucide="layout-grid" class="w-4 h-4 text-pink-500"></i>
+                    <span class="text-sm font-bold text-pink-600">Danh Mục</span>
+                </div>
+                <h2 class="font-display text-4xl lg:text-5xl font-bold text-gray-800">
+                    Bộ Sưu <span class="gradient-text">Tập</span>
+                </h2>
+                <p class="text-gray-500 mt-4 max-w-lg mx-auto">Khám phá các dòng túi xách đa dạng, phù hợp với mọi phong cách và nhu cầu</p>
+            </div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+                <div onclick="goToProductCategory('handbag')" class="category-card relative rounded-2xl overflow-hidden h-64 lg:h-80 cursor-pointer group animate-on-scroll">
+                    <img src="https://file.hstatic.net/200000978078/file/denim1_402306f2df9245ec87416290f8b2dab6.png" alt="Túi Xách Tay" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 p-4 lg:p-5 z-10">
+                        <h3 class="text-white font-display font-bold text-lg lg:text-xl">Túi Xách Tay</h3>
+                        <p class="text-white/80 text-sm mt-0.5">120+ mẫu thiết kế</p>
+                    </div>
+                    <div class="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                    </div>
+                </div>
+                <div onclick="goToProductCategory('crossbody')" class="category-card relative rounded-2xl overflow-hidden h-64 lg:h-80 cursor-pointer group animate-on-scroll">
+                    <img src="https://file.hstatic.net/200000978078/file/img_1812__1_.jpeg" alt="Túi Đeo Chéo" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 p-4 lg:p-5 z-10">
+                        <h3 class="text-white font-display font-bold text-lg lg:text-xl">Túi Đeo Chéo</h3>
+                        <p class="text-white/80 text-sm mt-0.5">85+ mẫu thiết kế</p>
+                    </div>
+                    <div class="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                    </div>
+                </div>
+                <div onclick="goToProductCategory('backpack')" class="category-card relative rounded-2xl overflow-hidden h-64 lg:h-80 cursor-pointer group animate-on-scroll">
+                    <img src="https://file.hstatic.net/200000978078/file/10.jpg" alt="Balo Nữ" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 p-4 lg:p-5 z-10">
+                        <h3 class="text-white font-display font-bold text-lg lg:text-xl">Balo Nữ</h3>
+                        <p class="text-white/80 text-sm mt-0.5">60+ mẫu thiết kế</p>
+                    </div>
+                    <div class="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                    </div>
+                </div>
+                <div onclick="goToProductCategory('clutch')" class="category-card relative rounded-2xl overflow-hidden h-64 lg:h-80 cursor-pointer group animate-on-scroll">
+                    <img src="https://file.hstatic.net/200000978078/file/pi.png" alt="Ví & Clutch" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 p-4 lg:p-5 z-10">
+                        <h3 class="text-white font-display font-bold text-lg lg:text-xl">Ví & Clutch</h3>
+                        <p class="text-white/80 text-sm mt-0.5">95+ mẫu thiết kế</p>
+                    </div>
+                    <div class="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                        <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 lg:py-28 relative">
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-fuchsia-200/20 rounded-full blur-3xl"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 animate-on-scroll">
+                <div class="inline-flex items-center gap-2 bg-gradient-to-r from-pink-100 to-fuchsia-100 rounded-full px-5 py-2 mb-5 border border-pink-200">
+                    <i data-lucide="sparkles" class="w-4 h-4 text-pink-500"></i>
+                    <span class="text-sm font-semibold text-pink-600">Sản phẩm nổi bật</span>
+                </div>
+                <h2 class="font-display text-4xl lg:text-5xl font-bold text-gray-800">
+                    Được yêu thích <span class="gradient-text">nhất</span>
+                </h2>
+                <p class="text-gray-500 mt-4 max-w-md mx-auto">Những mẫu túi xách bán chạy nhất, được hàng nghìn khách hàng tin tưởng và lựa chọn</p>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="flex flex-wrap justify-center gap-3 mb-10 animate-on-scroll">
+                <button onclick="filterProducts('all')" class="filter-btn active px-6 py-2 rounded-full text-sm font-semibold transition-all" data-filter="all">
+                    Tất Cả
+                </button>
+                <button onclick="filterProducts('handbag')" class="filter-btn px-6 py-2 rounded-full text-sm font-semibold transition-all" data-filter="handbag">
+                    Túi Xách Tay
+                </button>
+                <button onclick="filterProducts('crossbody')" class="filter-btn px-6 py-2 rounded-full text-sm font-semibold transition-all" data-filter="crossbody">
+                    Túi Đeo Chéo
+                </button>
+                <button onclick="filterProducts('backpack')" class="filter-btn px-6 py-2 rounded-full text-sm font-semibold transition-all" data-filter="backpack">
+                    Balo Nữ
+                </button>
+                <button onclick="filterProducts('clutch')" class="filter-btn px-6 py-2 rounded-full text-sm font-semibold transition-all" data-filter="clutch">
+                    Ví & Clutch
+                </button>
+            </div>
+
+            <!-- Products Grid -->
+            <div id="products-grid" class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+                <!-- Products will be injected by JS -->
+            </div>
+            <p id="search-result-info" class="text-center text-sm text-gray-500 mt-6 hidden"></p>
+
+            <div class="text-center mt-14 animate-on-scroll">
+                <button id="show-all-products-btn" class="group inline-flex items-center gap-2.5 px-10 py-4 rounded-2xl border-2 border-pink-300 text-pink-500 font-bold hover:bg-gradient-to-r hover:from-pink-500 hover:to-fuchsia-500 hover:text-white hover:border-transparent hover:shadow-xl hover:shadow-pink-300/30 transition-all text-[15px]">
+                    Xem Tất Cả Sản Phẩm
+                    <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST SECTION -->
+    <section class="py-20 md:py-32 bg-gradient-to-br from-pink-500 via-pink-400 to-purple-500 gradient-animated relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 w-40 h-40 border-2 border-white rounded-full"></div>
+            <div class="absolute bottom-10 right-10 w-60 h-60 border-2 border-white rounded-full"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 border-2 border-white rounded-full"></div>
+        </div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+                    Tại sao chọn HAPAS?
+                </h2>
+                <p class="text-white/80 text-lg max-w-2xl mx-auto">
+                    Chúng tôi cam kết mang đến trải nghiệm mua sắm và sử dụng tuyệt vời nhất
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="trust-card bg-white/15 backdrop-blur-md rounded-3xl p-8 text-center border border-white/20 hover:bg-white/25 transition-all duration-300 group">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-white/20 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                        <iconify-icon icon="lucide:shield-check" width="28" class="text-white"></iconify-icon>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">Bảo hành 12 tháng</h3>
+                    <p class="text-white/70 text-sm leading-relaxed">Cam kết bảo hành mọi lỗi sản phẩm, đổi mới trong 30 ngày đầu</p>
+                </div>
+
+                <div class="trust-card bg-white/15 backdrop-blur-md rounded-3xl p-8 text-center border border-white/20 hover:bg-white/25 transition-all duration-300 group">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-white/20 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                        <iconify-icon icon="lucide:truck" width="28" class="text-white"></iconify-icon>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">Giao hàng nhanh</h3>
+                    <p class="text-white/70 text-sm leading-relaxed">Miễn phí ship toàn quốc, nhận hàng trong 2-4 ngày làm việc</p>
+                </div>
+
+                <div class="trust-card bg-white/15 backdrop-blur-md rounded-3xl p-8 text-center border border-white/20 hover:bg-white/25 transition-all duration-300 group">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-white/20 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                        <iconify-icon icon="lucide:gem" width="28" class="text-white"></iconify-icon>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">Chất lượng cao cấp</h3>
+                    <p class="text-white/70 text-sm leading-relaxed">Da thật nhập khẩu Ý, đường may tỉ mỉ từng milimet</p>
+                </div>
+                
+                <div class="trust-card bg-white/15 backdrop-blur-md rounded-3xl p-8 text-center border border-white/20 hover:bg-white/25 transition-all duration-300 group">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-white/20 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                        <iconify-icon icon="lucide:headphones" width="28" class="text-white"></iconify-icon>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">Hỗ trợ 24/7</h3>
+                    <p class="text-white/70 text-sm leading-relaxed">Đội ngũ tư vấn viên luôn sẵn sàng hỗ trợ mọi lúc mọi nơi</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS SECTION -->
+    <section class="py-20 lg:py-28 bg-gradient-to-b from-white via-pink-50/50 to-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle at 2px 2px, #FF6B8A 1px, transparent 0); background-size: 40px 40px;"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-14 animate-on-scroll">
+                <div class="inline-flex items-center gap-2 bg-gradient-to-r from-pink-100 to-fuchsia-100 rounded-full px-5 py-2 mb-5 border border-pink-200">
+                    <i data-lucide="shopping-cart" class="w-4 h-4 text-pink-500"></i>
+                    <span class="text-sm font-bold text-pink-600">Quy Trình</span>
+                </div>
+                <h2 class="font-display text-4xl lg:text-5xl font-bold text-gray-800">
+                    Mua Sắm <span class="gradient-text">Dễ Dàng</span>
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+                <div class="process-step text-center animate-on-scroll">
+                    <div class="step-icon w-20 h-20 mx-auto rounded-2xl bg-gradient-to-br from-pink-400 to-rose-500 flex items-center justify-center mb-5 shadow-xl shadow-pink-200/40 relative">
+                        <i data-lucide="search" class="w-8 h-8 text-white"></i>
+                        <span class="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-white shadow-md flex items-center justify-center text-pink-500 font-bold text-sm border border-pink-100">1</span>
+                    </div>
+                    <h4 class="font-bold text-gray-800 mb-2">Chọn Sản Phẩm</h4>
+                    <p class="text-sm text-gray-500 leading-relaxed">Duyệt qua bộ sưu tập và chọn mẫu túi yêu thích</p>
+                </div>
+                <div class="process-step text-center animate-on-scroll">
+                    <div class="step-icon w-20 h-20 mx-auto rounded-2xl bg-gradient-to-br from-fuchsia-400 to-purple-500 flex items-center justify-center mb-5 shadow-xl shadow-fuchsia-200/40 relative">
+                        <i data-lucide="credit-card" class="w-8 h-8 text-white"></i>
+                        <span class="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-white shadow-md flex items-center justify-center text-fuchsia-500 font-bold text-sm border border-fuchsia-100">2</span>
+                    </div>
+                    <h4 class="font-bold text-gray-800 mb-2">Thanh Toán</h4>
+                    <p class="text-sm text-gray-500 leading-relaxed">Thanh toán an toàn qua nhiều phương thức</p>
+                </div>
+                <div class="process-step text-center animate-on-scroll">
+                    <div class="step-icon w-20 h-20 mx-auto rounded-2xl bg-gradient-to-br from-lavender-400 to-blue-500 flex items-center justify-center mb-5 shadow-xl shadow-lavender-400/30 relative">
+                        <i data-lucide="package" class="w-8 h-8 text-white"></i>
+                        <span class="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-white shadow-md flex items-center justify-center text-lavender-500 font-bold text-sm border border-lavender-400/30">3</span>
+                    </div>
+                    <h4 class="font-bold text-gray-800 mb-2">Giao Hàng</h4>
+                    <p class="text-sm text-gray-500 leading-relaxed">Giao hàng nhanh toàn quốc, đóng gói cẩn thận</p>
+                </div>
+                <div class="process-step text-center animate-on-scroll">
+                    <div class="step-icon w-20 h-20 mx-auto rounded-2xl bg-gradient-to-br from-coral-400 to-orange-500 flex items-center justify-center mb-5 shadow-xl shadow-coral-400/30 relative">
+                        <i data-lucide="heart" class="w-8 h-8 text-white"></i>
+                        <span class="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-white shadow-md flex items-center justify-center text-coral-400 font-bold text-sm border border-coral-400/30">4</span>
+                    </div>
+                    <h4 class="font-bold text-gray-800 mb-2">Tận Hưởng</h4>
+                    <p class="text-sm text-gray-500 leading-relaxed">Nhận túi xách và thể hiện phong cách riêng</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sale Banner -->
+    <section class="py-16 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="relative rounded-3xl overflow-hidden">
+                <!-- Animated gradient background -->
+                <div class="absolute inset-0 bg-gradient-to-r from-pink-500 via-fuchsia-500 via-lavender-400 to-coral-400" style="background-size:300% 100%;animation:gradient-shift 6s ease infinite;"></div>
+                <div class="absolute inset-0 bg-black/10"></div>
+
+                <!-- Decorative circles -->
+                <div class="absolute top-6 right-8 w-24 h-24 border-2 border-white/20 rounded-full"></div>
+                <div class="absolute top-10 right-12 w-16 h-16 border-2 border-white/15 rounded-full"></div>
+                <div class="absolute bottom-6 left-8 w-32 h-32 border-2 border-white/10 rounded-full"></div>
+                <div class="absolute bottom-12 left-16 w-20 h-20 border-2 border-white/15 rounded-full"></div>
+
+                <div class="relative z-10 text-center text-white py-12 lg:py-20 px-6">
+                    <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-5 py-2 mb-6 border border-white/20">
+                        <i data-lucide="flame" class="w-4 h-4"></i>
+                        <span class="text-sm font-bold tracking-wider uppercase">Flash Sale Cuối Tuần</span>
+                    </div>
+                    <h2 class="font-display text-5xl lg:text-7xl font-extrabold mb-4 drop-shadow-lg">
+                        GIẢM ĐẾN <span class="text-yellow-300">50%</span>
+                    </h2>
+                    <p class="text-white/80 text-lg mb-10 max-w-md mx-auto">
+                        Cơ hội vàng để sở hữu túi xách cao cấp với giá ưu đãi nhất năm!
+                    </p>
+                    <div class="flex justify-center gap-3 sm:gap-5 mb-10">
+                        <div class="bg-white/15 backdrop-blur-md rounded-2xl px-5 py-4 min-w-[75px] border border-white/20">
+                            <div id="countdown-hours" class="font-display text-3xl lg:text-4xl font-extrabold">12</div>
+                            <div class="text-xs text-white/70 font-medium mt-1">GIỜ</div>
+                        </div>
+                        <div class="text-3xl font-bold self-center text-white/50">:</div>
+                        <div class="bg-white/15 backdrop-blur-md rounded-2xl px-5 py-4 min-w-[75px] border border-white/20">
+                            <div id="countdown-minutes" class="font-display text-3xl lg:text-4xl font-extrabold">45</div>
+                            <div class="text-xs text-white/70 font-medium mt-1">PHÚT</div>
+                        </div>
+                        <div class="text-3xl font-bold self-center text-white/50">:</div>
+                        <div class="bg-white/15 backdrop-blur-md rounded-2xl px-5 py-4 min-w-[75px] border border-white/20">
+                            <div id="countdown-seconds" class="font-display text-3xl lg:text-4xl font-extrabold">30</div>
+                            <div class="text-xs text-white/70 font-medium mt-1">GIÂY</div>
+                        </div>
+                    </div>
+                    <a href="#collections" class="inline-block px-10 py-4 bg-white text-pink-600 rounded-2xl font-extrabold shadow-2xl hover:shadow-3xl transition-all hover:-translate-y-1.5 hover:scale-105 text-[15px]">
+                        Mua Sắm Ngay 🛍️
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="reviews" class="py-20 lg:py-28 bg-gradient-to-b from-white to-pink-50 relative overflow-hidden">
+        <div class="absolute top-20 right-0 w-72 h-72 bg-pink-200/15 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-20 left-0 w-96 h-96 bg-fuchsia-200/10 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-14 animate-on-scroll">
+                <div class="inline-flex items-center gap-2 bg-gradient-to-r from-pink-100 to-fuchsia-100 rounded-full px-5 py-2 mb-5 border border-pink-200">
+                    <i data-lucide="message-circle" class="w-4 h-4 text-pink-500"></i>
+                    <span class="text-sm font-bold text-pink-600">Đánh Giá</span>
+                </div>
+                <h2 class="font-display text-4xl lg:text-5xl font-bold text-gray-800">
+                    Khách Hàng <span class="gradient-text">Nói Gì</span>
+                </h2>
+                <p class="text-gray-500 mt-4 max-w-lg mx-auto">Hơn 50.000 khách hàng tin tưởng và yêu thích HAPAS</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="review-card bg-white rounded-2xl p-7 border border-pink-100 hover:border-pink-300 hover:shadow-2xl hover:shadow-pink-100/40 transition-all animate-on-scroll relative overflow-hidden">
+                    <div class="absolute top-6 right-6 text-pink-400">
+                        <iconify-icon icon="lucide:quote" width="32"></iconify-icon>
+                    </div>
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-pink-100 to-transparent rounded-bl-[3rem]"></div>
+                    <div class="flex items-center gap-1 mb-4">
+                        <iconify-icon icon="lucide:star" width="14" style="color: #FBBF24"></iconify-icon>
+                        <iconify-icon icon="lucide:star" width="14" style="color: #FBBF24"></iconify-icon>
+                        <iconify-icon icon="lucide:star" width="14" style="color: #FBBF24"></iconify-icon>
+                        <iconify-icon icon="lucide:star" width="14" style="color: #FBBF24"></iconify-icon>
+                        <iconify-icon icon="lucide:star" width="14" style="color: #FBBF24"></iconify-icon>
+                    </div>
+                    <p class="text-gray-600 mb-6 leading-relaxed text-[15px]">
+                        "Chất lượng túi xách HAPAS thật sự ấn tượng! Da mềm, đường may tinh tế, mình đã mua 3 chiếc rồi và đều rất hài lòng. ♡"
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://picsum.photos/seed/hapas-user1/100/100" alt="" class="w-11 h-11 rounded-full object-cover ring-2 ring-pink-200">
+                        <div>
+                            <p class="font-bold text-gray-800 text-sm">Nguyễn Minh Anh</p>
+                            <p class="text-xs text-pink-400 font-semibold">Khách hàng VIP 💎</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card bg-white rounded-2xl p-7 border border-pink-100 hover:border-fuchsia-300 hover:shadow-2xl hover:shadow-fuchsia-100/40 transition-all animate-on-scroll relative overflow-hidden">
+                    <div class="absolute top-6 right-6 text-purple-400">
+                        <iconify-icon icon="lucide:quote" width="32"></iconify-icon>
+                    </div>
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-fuchsia-100 to-transparent rounded-bl-[3rem]"></div>
+                    <div class="flex items-center gap-1 mb-4">
+                        <iconify-icon icon="lucide:star" width="14" style="color: #FBBF24"></iconify-icon>
+                        <iconify-icon icon="lucide:star" width="14" style="color: #FBBF24"></iconify-icon>
+                        <iconify-icon icon="lucide:star" width="14" style="color: #FBBF24"></iconify-icon>
+                        <iconify-icon icon="lucide:star" width="14" style="color: #FBBF24"></iconify-icon>
+                        <iconify-icon icon="lucide:star" width="14" style="color: #FBBF24"></iconify-icon>
+                    </div>
+                    <p class="text-gray-600 mb-6 leading-relaxed text-[15px]">
+                        "Thiết kế rất đẹp và sang trọng, đóng gói cẩn thận, giao hàng nhanh. Sẽ ủng hộ HAPAS lâu dài! Giá xứng đáng với chất lượng."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://graph.facebook.com/v20.0/100014122308182/picture?width=500&height=500&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662" alt="" class="w-11 h-11 rounded-full object-cover ring-2 ring-fuchsia-200">
+                        <div>
+                            <p class="font-bold text-gray-800 text-sm">Trần Phạm Thanh Tuyền</p>
+                            <p class="text-xs text-fuchsia-400 font-semibold">Khách hàng thân thiết 🏆</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card bg-white rounded-2xl p-7 border border-pink-100 hover:border-lavender-400 hover:shadow-2xl hover:shadow-lavender-400/20 transition-all animate-on-scroll relative overflow-hidden">
+                    <div class="absolute top-6 right-6 text-orange-400">
+                        <iconify-icon icon="lucide:quote" width="32"></iconify-icon>
+                    </div>
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-lavender-400/10 to-transparent rounded-bl-[3rem]"></div>
+                    <div class="flex items-center gap-1 mb-4">
+                        <iconify-icon icon="lucide:star" width="14" style="color: #FBBF24"></iconify-icon>
+                        <iconify-icon icon="lucide:star" width="14" style="color: #FBBF24"></iconify-icon>
+                        <iconify-icon icon="lucide:star" width="14" style="color: #FBBF24"></iconify-icon>
+                        <iconify-icon icon="lucide:star" width="14" style="color: #FBBF24"></iconify-icon>
+                        <iconify-icon icon="lucide:star-half" width="14" style="color: #FBBF24"></iconify-icon>
+                    </div>
+                    <p class="text-gray-600 mb-6 leading-relaxed text-[15px]">
+                        "Tôi đã giới thiệu HAPAS cho tất cả bạn bè. Túi xách đẹp, giá hợp lý, dịch vụ tuyệt vời. 10/10 điểm! 🌸"
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <img src="https://picsum.photos/seed/hapas-user3/100/100" alt="" class="w-11 h-11 rounded-full object-cover ring-2 ring-lavender-400/30">
+                        <div>
+                            <p class="font-bold text-gray-800 text-sm">Lê Phương Thảo</p>
+                            <p class="text-xs text-lavender-400 font-semibold">Reviewer ⭐</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== INSTAGRAM GALLERY ========== -->
+    <section class="py-20 lg:py-28 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14 animate-on-scroll">
+                <div class="inline-flex items-center gap-2 bg-gradient-to-r from-pink-100 to-fuchsia-100 rounded-full px-5 py-2 mb-5 border border-pink-200">
+                    <i data-lucide="instagram" class="w-4 h-4 text-pink-500"></i>
+                    <span class="text-sm font-bold text-pink-600">HAPAS OFFICIAL</span>
+                </div>
+                <h2 class="font-display text-4xl lg:text-5xl font-bold text-gray-800">
+                    Theo Dõi <span class="gradient-text">Instagram</span>
+                </h2>
+                <p class="text-gray-500 mt-4">HAPAS - Điều bình thường tươi đẹp!</p>
+            </div>
+
+            <div class="grid grid-cols-3 lg:grid-cols-6 gap-2 lg:gap-3">
+                <div class="instagram-item relative rounded-xl lg:rounded-2xl overflow-hidden h-32 sm:h-40 lg:h-52 cursor-pointer animate-on-scroll">
+                    <img src="https://picsum.photos/seed/hapas-ig1/400/520" alt="" class="w-full h-full object-cover">
+                    <div class="ig-overlay absolute inset-0 bg-gradient-to-t from-pink-600/70 to-transparent flex items-end justify-center pb-4">
+                        <div class="flex items-center gap-1.5 text-white text-sm font-bold"><i data-lucide="heart" class="w-4 h-4"></i> 2.3K</div>
+                    </div>
+                </div>
+                <div class="instagram-item relative rounded-xl lg:rounded-2xl overflow-hidden h-32 sm:h-40 lg:h-52 cursor-pointer animate-on-scroll">
+                    <img src="https://picsum.photos/seed/hapas-ig2/400/520" alt="" class="w-full h-full object-cover">
+                    <div class="ig-overlay absolute inset-0 bg-gradient-to-t from-fuchsia-600/70 to-transparent flex items-end justify-center pb-4">
+                        <div class="flex items-center gap-1.5 text-white text-sm font-bold"><i data-lucide="heart" class="w-4 h-4"></i> 1.8K</div>
+                    </div>
+                </div>
+                <div class="instagram-item relative rounded-xl lg:rounded-2xl overflow-hidden h-32 sm:h-40 lg:h-52 cursor-pointer animate-on-scroll">
+                    <img src="https://picsum.photos/seed/hapas-ig3/400/520" alt="" class="w-full h-full object-cover">
+                    <div class="ig-overlay absolute inset-0 bg-gradient-to-t from-lavender-400/70 to-transparent flex items-end justify-center pb-4">
+                        <div class="flex items-center gap-1.5 text-white text-sm font-bold"><i data-lucide="heart" class="w-4 h-4"></i> 3.1K</div>
+                    </div>
+                </div>
+                <div class="instagram-item relative rounded-xl lg:rounded-2xl overflow-hidden h-32 sm:h-40 lg:h-52 cursor-pointer animate-on-scroll">
+                    <img src="https://picsum.photos/seed/hapas-ig4/400/520" alt="" class="w-full h-full object-cover">
+                    <div class="ig-overlay absolute inset-0 bg-gradient-to-t from-coral-400/70 to-transparent flex items-end justify-center pb-4">
+                        <div class="flex items-center gap-1.5 text-white text-sm font-bold"><i data-lucide="heart" class="w-4 h-4"></i> 956</div>
+                    </div>
+                </div>
+                <div class="instagram-item relative rounded-xl lg:rounded-2xl overflow-hidden h-32 sm:h-40 lg:h-52 cursor-pointer animate-on-scroll">
+                    <img src="https://picsum.photos/seed/hapas-ig5/400/520" alt="" class="w-full h-full object-cover">
+                    <div class="ig-overlay absolute inset-0 bg-gradient-to-t from-pink-500/70 to-transparent flex items-end justify-center pb-4">
+                        <div class="flex items-center gap-1.5 text-white text-sm font-bold"><i data-lucide="heart" class="w-4 h-4"></i> 2.7K</div>
+                    </div>
+                </div>
+                <div class="instagram-item relative rounded-xl lg:rounded-2xl overflow-hidden h-32 sm:h-40 lg:h-52 cursor-pointer animate-on-scroll">
+                    <img src="https://picsum.photos/seed/hapas-ig6/400/520" alt="" class="w-full h-full object-cover">
+                    <div class="ig-overlay absolute inset-0 bg-gradient-to-t from-rose-500/70 to-transparent flex items-end justify-center pb-4">
+                        <div class="flex items-center gap-1.5 text-white text-sm font-bold"><i data-lucide="heart" class="w-4 h-4"></i> 1.5K</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section id="contact" class="py-16 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="relative bg-white rounded-3xl p-8 lg:p-16 border border-pink-200 shadow-2xl shadow-pink-100/30 overflow-hidden">
+                <div class="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-pink-100/60 to-fuchsia-100/40 rounded-full -translate-y-1/2 translate-x-1/3"></div>
+                <div class="absolute bottom-0 left-0 w-56 h-56 bg-gradient-to-br from-lavender-400/20 to-pink-100/40 rounded-full translate-y-1/2 -translate-x-1/3"></div>
+                <div class="absolute top-10 left-10 w-3 h-3 rounded-full bg-pink-400/40 float-animation"></div>
+                <div class="absolute bottom-10 right-20 w-4 h-4 rounded-full bg-fuchsia-400/30 float-reverse"></div>
+                <div class="absolute top-1/2 right-1/4 w-2 h-2 rounded-full bg-coral-400/40 float-animation" style="animation-delay:-3s"></div>
+
+                <div class="relative z-10 text-center">
+                    <div class="inline-flex items-center gap-2 bg-gradient-to-r from-pink-100 to-fuchsia-100 rounded-full px-5 py-2 mb-5 border border-pink-200">
+                        <i data-lucide="mail" class="w-4 h-4 text-pink-500"></i>
+                        <span class="text-sm font-bold text-pink-600">Đăng Ký</span>
+                    </div>
+                    <h2 class="font-display text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
+                        Nhận Ưu Đãi <span class="gradient-text">Độc Quyền</span>
+                    </h2>
+                    <p class="text-gray-500 max-w-md mx-auto mb-8">
+                        Đăng ký nhận bản tin để không bỏ lỡ ưu đãi, bộ sưu tập mới và tips phối đồ từ HAPAS
+                    </p>
+                    <form onsubmit="handleSubscribe(event)" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                        <input type="email" id="email-input" placeholder="Nhập email của bạn..." required
+                            class="flex-1 px-5 py-3 rounded-xl border border-pink-200 focus:border-pink-400 focus:ring-2 focus:ring-pink-200 outline-none transition-all bg-pink-50/50">
+                        <button type="submit" class="px-6 py-3 rounded-xl shimmer-bg text-white font-bold shadow-lg shadow-pink-300/30 hover:shadow-pink-400/50 transition-shadow whitespace-nowrap">
+                            Đăng Ký ♡
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white pt-16 pb-8 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-1 shimmer-bg"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
+                <!-- Brand -->
+                <div class="col-span-2 lg:col-span-1">
+                    <div class="flex items-center gap-2 mb-4">
+                        <img src="//cdn.hstatic.net/themes/200000978078/1001412493/14/favicon.png?v=330" alt="HAPAS Logo" class="w-10 h-10 rounded-xl object-cover">
+                        <span class="font-display text-2xl font-bold text-white">HAPAS</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                        Thương hiệu túi xách cao cấp hàng đầu Việt Nam. Mang đến phong cách và sự tự tin cho mọi phụ nữ.
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="https://www.facebook.com/hapas2010" class="w-10 h-10 rounded-xl bg-white/10 hover:bg-pink-500 flex items-center justify-center transition-colors">
+                            <iconify-icon icon="lucide:facebook" width="16" class="text-white"></iconify-icon>
+                        </a>
+                        <a href="https://www.instagram.com/hapas.vn/" class="w-10 h-10 rounded-xl bg-white/10 hover:bg-pink-500 flex items-center justify-center transition-colors">
+                            <iconify-icon icon="lucide:instagram" width="16" class="text-white"></iconify-icon>
+                        </a>
+                        <a href="https://www.tiktok.com/@hapas.official" class="w-10 h-10 rounded-xl bg-white/10 hover:bg-pink-500 flex items-center justify-center transition-colors">
+                            <iconify-icon icon="lucide:youtube" width="16" class="text-white"></iconify-icon>
+                        </a>
+                        <a href="https://zalo.me/duyvinh09" class="w-10 h-10 rounded-xl bg-white/10 hover:bg-pink-500 flex items-center justify-center transition-colors">
+                            <iconify-icon icon="lucide:message-circle" width="16" class="text-white"></iconify-icon>
+                        </a>
+                    </div>
+                </div>
+                <!-- Links -->
+                <div>
+                    <h4 class="font-bold text-white mb-4">Sản Phẩm</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-pink-400 text-sm transition-colors">Túi Xách Tay</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-400 text-sm transition-colors">Túi Đeo Chéo</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-400 text-sm transition-colors">Balo Nữ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-400 text-sm transition-colors">Ví & Clutch</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-400 text-sm transition-colors">Phụ Kiện</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Hỗ Trợ</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-pink-400 text-sm transition-colors">Hướng Dẫn Mua Hàng</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-400 text-sm transition-colors">Chính Sách Đổi Trả</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-400 text-sm transition-colors">Bảo Hành</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-400 text-sm transition-colors">Vận Chuyển</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-400 text-sm transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Liên Hệ</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-2 text-gray-400 text-sm">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-pink-400 shrink-0 mt-0.5"></i>
+                            108 Phạm Ngọc Thạch, Đống Đa, Hà Nội
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-400 text-sm">
+                            <i data-lucide="phone" class="w-4 h-4 text-pink-400 shrink-0"></i>
+                            036 866 3456
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-400 text-sm">
+                            <i data-lucide="mail" class="w-4 h-4 text-pink-400 shrink-0"></i>
+                            hello@hapas.vn
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-400 text-sm">
+                            <i data-lucide="clock" class="w-4 h-4 text-pink-400 shrink-0"></i>
+                            9:00 - 22:00 hàng ngày
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p class="text-gray-500 text-sm">© 2026 HAPAS. Tất cả quyền được bảo lưu.</p>
+                <div class="flex items-center gap-4">
+                    <img src="https://img.icons8.com/color/40/visa.png" alt="Visa" class="h-6">
+                    <img src="https://img.icons8.com/color/40/mastercard.png" alt="Mastercard" class="h-6">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Quick View Modal -->
+    <div id="quick-view-modal" class="modal-overlay fixed inset-0 bg-black/50 z-[70] flex items-center justify-center p-4">
+        <div class="modal-content bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div id="modal-content-inner" class="p-6 lg:p-8">
+                <!-- Dynamic content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Support Chat Bubble -->
+    <div class="fixed bottom-6 left-6 z-[75]">
+        <div id="support-chat-panel" class="hidden w-[320px] sm:w-[360px] mb-3 rounded-2xl border border-pink-200 bg-white shadow-2xl shadow-pink-200/40 overflow-hidden">
+            <div class="px-4 py-3 bg-gradient-to-r from-pink-500 to-fuchsia-500 text-white flex items-center justify-between">
+                <div>
+                    <p class="font-bold text-sm">Hỗ trợ khách hàng</p>
+                    <p class="text-xs text-white/90">Phản hồi trong vài phút</p>
+                </div>
+                <button onclick="toggleSupportChat()" class="p-1.5 rounded-lg hover:bg-white/20 transition-colors">
+                    <i data-lucide="x" class="w-4 h-4"></i>
+                </button>
+            </div>
+            <div id="support-chat-messages" class="h-72 overflow-y-auto p-3 bg-gradient-to-b from-pink-50/60 to-white space-y-2"></div>
+            <div class="px-3 pt-2 pb-3 border-t border-pink-100 bg-white">
+                <div class="flex flex-wrap gap-2 mb-2">
+                    <button onclick="sendSupportQuickReply('Phí ship bao nhiêu vậy ạ?')" class="px-2.5 py-1 rounded-full border border-pink-200 text-xs text-pink-500 hover:bg-pink-50 transition-colors">Phí ship</button>
+                    <button onclick="sendSupportQuickReply('Mình muốn đổi trả sản phẩm')" class="px-2.5 py-1 rounded-full border border-pink-200 text-xs text-pink-500 hover:bg-pink-50 transition-colors">Đổi trả</button>
+                    <button onclick="sendSupportQuickReply('Có mã giảm giá không shop?')" class="px-2.5 py-1 rounded-full border border-pink-200 text-xs text-pink-500 hover:bg-pink-50 transition-colors">Mã giảm giá</button>
+                </div>
+                <div class="flex items-end gap-2">
+                    <textarea id="support-chat-input" rows="1" placeholder="Nhập tin nhắn..." onkeydown="handleSupportKeydown(event)" class="flex-1 resize-none px-3 py-2.5 rounded-xl border border-pink-200 outline-none focus:border-pink-400 text-sm"></textarea>
+                    <button onclick="sendSupportMessage()" class="w-10 h-10 rounded-xl shimmer-bg text-white flex items-center justify-center shadow-lg shadow-pink-300/30 hover:scale-105 transition-transform">
+                        <i data-lucide="send" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <button id="support-chat-toggle" onclick="toggleSupportChat()" class="w-14 h-14 rounded-full shimmer-bg text-white shadow-xl shadow-pink-300/40 flex items-center justify-center hover:scale-105 transition-transform relative">
+            <i data-lucide="message-circle" class="w-6 h-6"></i>
+            <span class="absolute -top-1 -right-1 w-3 h-3 rounded-full bg-green-400 border-2 border-white"></span>
+        </button>
+    </div>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" 
+        class="fixed bottom-6 right-6 w-12 h-12 rounded-full shimmer-bg text-white shadow-lg shadow-pink-300/40 flex items-center justify-center z-40 opacity-0 translate-y-4 transition-all duration-300 hover:scale-110">
+        <i data-lucide="chevron-up" class="w-5 h-5"></i>
+    </button>
+
+    <script>
+        // ===== PRODUCTS DATA =====
+        const products = [
+            {
+                id: 1, name: "Túi Xách Tay Candy", category: "handbag",
+                price: 1290000, originalPrice: 1890000,
+                image: "https://cdn.hstatic.net/products/200000978078/_bac0836_0cf57dc33dbc41a09e617e267166e089_master.jpg",
+                tag: "Hot", colors: ["#FF3D6B", "#8C003A", "#000"],
+                desc: "Túi xách tay sang trọng với chất liệu da thật cao cấp, thiết kế tối giản thanh lịch."
+            },
+            {
+                id: 2, name: "Túi Xách Tay Phủ Màu Tag Vuông", category: "handbag",
+                price: 990000, originalPrice: 1490000,
+                image: "https://product.hstatic.net/200000978078/product/img_7804_-_copy_895efdf02122472da0177d637a60f3af_master.jpg",
+                tag: "Sale", colors: ["#FF6B8A", "#FFA0B4", "#FFF"],
+                desc: "Túi xách tay phong cách nhẹ nhàng, nữ tính với gam màu hồng pastel."
+            },
+            {
+                id: 3, name: "Túi Đeo Vai Quai Xích Lea Chain", category: "crossbody",
+                price: 890000, originalPrice: 1290000,
+                image: "https://cdn.hstatic.net/products/200000978078/_mg_0420_4bdea6aa1fc5498ea01b19dd9932f87b_master.jpg",
+                tag: "Mới", colors: ["#FF8C42", "#FFB347", "#FFF"],
+                desc: "Túi đeo chéo nhỏ gọn, tiện lợi, phù hợp đi chơi và dạo phố."
+            },
+            {
+                id: 4, name: "Túi Tote Đai Móc Amee", category: "clutch",
+                price: 690000, originalPrice: 990000,
+                image: "https://cdn.hstatic.net/products/200000978078/tot1_a37ee748b83c40c4b1997af69a4f2f4e_master.png",
+                tag: "Hot", colors: ["#FFF", "#F5D0FE", "#FFC8D6"],
+                desc: "Ví clutch thanh lịch, hoàn hảo cho những bữa tiệc tối sang trọng."
+            },
+            {
+                id: 5, name: "Túi Đeo Vai Đai Ngang C Chic", category: "crossbody",
+                price: 1190000, originalPrice: 1590000,
+                image: "https://cdn.hstatic.net/products/200000978078/img_2955_819dce2d03e2410e88f1cb651ece7581_master.jpg",
+                tag: "Sale", colors: ["#4F9DFF", "#89C4FF", "#FFF"],
+                desc: "Túi đeo chéo thiết kế hiện đại, chất liệu da mềm, chống nước tốt."
+            },
+            {
+                id: 6, name: "Balo Túi Hộp Ô Trám Chainy", category: "backpack",
+                price: 1490000, originalPrice: 2190000,
+                image: "https://cdn.hstatic.net/products/200000978078/_mg_6980_3faadd3320e748bb942623ced755e818_master.jpg",
+                tag: "Hot", colors: ["#FF6B8A", "#FF3D6B", "#333"],
+                desc: "Balo nữ phong cách Hàn Quốc, nhiều ngăn chứa đồ, đệm lưng êm ái."
+            },
+            {
+                id: 7, name: "Túi Tote Quai Tròn Hearty", category: "handbag",
+                price: 1390000, originalPrice: 1990000,
+                image: "https://cdn.hstatic.net/products/200000978078/tot5_5d135464ef6a4234a32e6cb157549b92_master.png",
+                tag: "Mới", colors: ["#9B59B6", "#8E44AD", "#FFF"],
+                desc: "Túi xách tay cao cấp, thiết kế sang trọng với điểm nhấn kim loại vàng."
+            },
+            {
+                id: 8, name: "Túi Đeo Vai Đai Dài Bubbly Mơ", category: "clutch",
+                price: 590000, originalPrice: 890000,
+                image: "https://cdn.hstatic.net/products/200000978078/d_p_n_i_1_b782568bd4f1404a8800de299457bc6b_master.png",
+                tag: "Sale", colors: ["#F5F0E8", "#D4C5A9", "#8B7355"],
+                desc: "Ví nữ nhỏ gọn với họa tiết tối giản, phong cách thanh lịch, hiện đại."
+            },
+            {
+                id: 9, name: "Túi Đeo Vai Hobo Dập Nổi Line Embossed", category: "handbag",
+                price: 1590000, originalPrice: 2290000,
+                image: "https://cdn.hstatic.net/products/200000978078/untitled_design_b5ea764b9eb846aba768725fc8161ce3_master.png",
+                tag: "Hot", colors: ["#111827", "#374151", "#9CA3AF"],
+                desc: "Túi xách tay gam màu đen sang trọng, phù hợp đi làm và dự tiệc."
+            },
+            {
+                id: 10, name: "Túi Đeo Vai Hobo Đáy Vuông Love Charm", category: "crossbody",
+                price: 1090000, originalPrice: 1490000,
+                image: "https://cdn.hstatic.net/products/200000978078/love_charm_2f83752c2bcb45d69300a8942b8e4dbd_master.jpg",
+                tag: "Mới", colors: ["#F3E8D2", "#D6C3A5", "#7C6A52"],
+                desc: "Túi đeo chéo dáng hộp nhỏ gọn, dễ phối đồ cho phong cách hàng ngày."
+            },
+            {
+                id: 11, name: "Balo Nắp Gập Ô Trám Nova", category: "backpack",
+                price: 1690000, originalPrice: 2390000,
+                image: "https://cdn.hstatic.net/products/200000978078/d_p_n_i_1_7f7d7a5a41784fde9b64b931da4d72aa_master.png",
+                tag: "Sale", colors: ["#FF7AA2", "#FF4D8D", "#FFFFFF"],
+                desc: "Balo nữ cao cấp chống nước nhẹ, ngăn chứa rộng cho laptop và đồ cá nhân."
+            },
+            {
+                id: 12, name: "Túi Đeo Vai Hobo Nắp Gập Chain Handle", category: "clutch",
+                price: 790000, originalPrice: 1090000,
+                image: "https://cdn.hstatic.net/products/200000978078/img_4994_1146de6887c546d9baf74869e2f636fc_master.jpg",
+                tag: "Mới", colors: ["#E5E7EB", "#C4B5FD", "#F9FAFB"],
+                desc: "Clutch ánh kim nổi bật, tạo điểm nhấn tinh tế cho những buổi tiệc tối."
+            },
+            {
+                id: 13, name: "Ví Card Nắp Gập Silver Chain", category: "handbag",
+                price: 1490000, originalPrice: 2090000,
+                image: "https://product.hstatic.net/200000978078/product/20241220_y7bu1f5rca_f39dd244cf1f40999cfaf854b20d824b_master.jpeg",
+                tag: "Hot", colors: ["#7C4A2D", "#A16207", "#EAB308"],
+                desc: "Túi xách dáng cổ điển với chất liệu da vân mềm, tôn lên nét thanh lịch."
+            },
+            {
+                id: 14, name: "Ví Dài Happiness Hand Wallet", category: "crossbody",
+                price: 980000, originalPrice: 1390000,
+                image: "https://cdn.hstatic.net/products/200000978078/_bac1585_63f29d22c8f944b981d4f7a97c116831_master.jpg",
+                tag: "Sale", colors: ["#FFFFFF", "#F3F4F6", "#D1D5DB"],
+                desc: "Túi đeo chéo trẻ trung với dây bản nhỏ, thích hợp dạo phố cuối tuần."
+            },
+            {
+                id: 15, name: "Ví Đeo Chéo Mini Squared Quilted", category: "backpack",
+                price: 1390000, originalPrice: 1890000,
+                image: "https://cdn.hstatic.net/products/200000978078/hapas110641_4bba1a7fe48a4dd7ac5967085db782cd_master.jpg",
+                tag: "Mới", colors: ["#9CA3AF", "#6B7280", "#1F2937"],
+                desc: "Balo tối giản, nhẹ và bền, phù hợp cho công việc và di chuyển thường xuyên."
+            },
+            {
+                id: 16, name: "Túi Xách Tay Quai Đôi Dáng Hộp Quinx", category: "clutch",
+                price: 650000, originalPrice: 930000,
+                image: "https://cdn.hstatic.net/products/200000978078/z7328315634391_bfc0e0d327a7905989e4ad07aa41ecdb_bf52e8f47acb4f05ad062e61e2271bee_master.jpg",
+                tag: "Sale", colors: ["#F9A8D4", "#F472B6", "#BE185D"],
+                desc: "Ví clutch cầm tay gọn nhẹ với gam màu hồng nổi bật, nữ tính và hiện đại."
+            }
+        ];
+
+        let cart = [];
+        let currentFilter = 'all';
+        let currentSearch = '';
+        const INITIAL_PRODUCTS_LIMIT = 8;
+        let isShowingAllProducts = false;
+        const wishlistIds = new Set();
+        const couponDefinitions = {
+            HAPAS20: { type: 'percent', value: 20, label: 'Giảm 20%' },
+            FREESHIP50: { type: 'fixed', value: 50000, label: 'Giảm 50.000đ' }
+        };
+        let appliedCouponCode = '';
+        let supportChatSeeded = false;
+
+        // ===== RENDER PRODUCTS =====
+        function renderProducts(filter = 'all', searchQuery = '') {
+            const grid = document.getElementById('products-grid');
+            const normalizedSearch = searchQuery.trim().toLowerCase();
+            const filteredByCategory = filter === 'all' ? products : products.filter(p => p.category === filter);
+            const filtered = filteredByCategory.filter(p =>
+                !normalizedSearch ||
+                p.name.toLowerCase().includes(normalizedSearch) ||
+                p.desc.toLowerCase().includes(normalizedSearch)
+            );
+            const shouldLimitFeatured = !isShowingAllProducts && filter === 'all' && !normalizedSearch;
+            const visibleProducts = shouldLimitFeatured ? filtered.slice(0, INITIAL_PRODUCTS_LIMIT) : filtered;
+            const searchInfo = document.getElementById('search-result-info');
+            const showAllBtn = document.getElementById('show-all-products-btn');
+            
+            grid.innerHTML = visibleProducts.map((product, i) => `
+                <div class="product-card bg-white rounded-2xl overflow-hidden border border-pink-100 hover:border-pink-300 hover:shadow-xl hover:shadow-pink-100/50 animate-on-scroll" 
+                     data-category="${product.category}" style="animation-delay: ${i * 100}ms;">
+                    <div class="relative overflow-hidden">
+                        <img src="${product.image}" alt="${product.name}" 
+                             class="product-img w-full h-48 sm:h-56 object-cover">
+                        <div class="product-overlay absolute inset-0 bg-black/20 flex items-center justify-center gap-3">
+                            <button onclick="openQuickView(${product.id})" 
+                                class="w-10 h-10 rounded-full bg-white/90 hover:bg-white flex items-center justify-center text-gray-700 hover:text-pink-500 transition-colors shadow-lg"
+                                title="Xem nhanh">
+                                <i data-lucide="eye" class="w-4 h-4"></i>
+                            </button>
+                            <button onclick="addToCart(${product.id})" 
+                                class="w-10 h-10 rounded-full bg-pink-500/90 hover:bg-pink-600 flex items-center justify-center text-white transition-colors shadow-lg"
+                                title="Thêm vào giỏ">
+                                <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                            </button>
+                            <button onclick="toggleWishlist(${product.id}, this)" 
+                                class="w-10 h-10 rounded-full bg-white/90 hover:bg-white flex items-center justify-center text-gray-700 hover:text-pink-500 transition-colors shadow-lg"
+                                title="Yêu thích">
+                                <i data-lucide="heart" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                        ${product.tag ? `<span class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold text-white ${
+                            product.tag === 'Hot' ? 'bg-gradient-to-r from-orange-400 to-red-500' :
+                            product.tag === 'Sale' ? 'bg-gradient-to-r from-pink-500 to-fuchsia-500' :
+                            'bg-gradient-to-r from-green-400 to-emerald-500'
+                        }">${product.tag}</span>` : ''}
+                    </div>
+                    <div class="p-4">
+                        <div class="flex items-center gap-1 mb-2">
+                            ${product.colors.map(c => `<span class="w-3 h-3 rounded-full border border-gray-200" style="background:${c}"></span>`).join('')}
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-1 truncate">${product.name}</h3>
+                        <div class="flex items-center gap-2">
+                            <span class="font-bold text-pink-500">${formatPrice(product.price)}</span>
+                            ${product.originalPrice ? `<span class="text-xs text-gray-400 line-through">${formatPrice(product.originalPrice)}</span>` : ''}
+                        </div>
+                        <div class="mt-2">
+                            <span class="text-xs text-green-600 font-medium bg-green-50 px-2 py-0.5 rounded-full">
+                                Tiết kiệm ${Math.round((1 - product.price/product.originalPrice) * 100)}%
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+            if (visibleProducts.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-span-2 lg:col-span-4 text-center py-14 border border-dashed border-pink-200 rounded-2xl bg-white">
+                        <p class="font-semibold text-gray-700 mb-1">Không tìm thấy sản phẩm phù hợp</p>
+                        <p class="text-sm text-gray-500">Hãy thử từ khóa khác hoặc chọn danh mục khác.</p>
+                    </div>
+                `;
+            }
+
+            if (normalizedSearch) {
+                searchInfo.textContent = `Tìm thấy ${filtered.length} sản phẩm với từ khóa "${searchQuery}".`;
+                searchInfo.classList.remove('hidden');
+            } else {
+                searchInfo.classList.add('hidden');
+                searchInfo.textContent = '';
+            }
+
+            if (showAllBtn) {
+                const hasMoreProducts = filtered.length > INITIAL_PRODUCTS_LIMIT && filter === 'all' && !normalizedSearch;
+                showAllBtn.classList.toggle('hidden', !hasMoreProducts || isShowingAllProducts);
+            }
+            
+            lucide.createIcons();
+            initScrollAnimations();
+        }
+
+        function formatPrice(price) {
+            return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(price);
+        }
+
+        function filterProducts(filter) {
+            currentFilter = filter;
+            if (filter !== 'all') {
+                isShowingAllProducts = true;
+            }
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                if (btn.dataset.filter === filter) {
+                    btn.classList.add('active', 'bg-gradient-to-r', 'from-pink-500', 'to-fuchsia-500', 'text-white', 'shadow-md', 'shadow-pink-300/30');
+                    btn.classList.remove('bg-white', 'text-gray-600', 'border', 'border-pink-200');
+                } else {
+                    btn.classList.remove('active', 'bg-gradient-to-r', 'from-pink-500', 'to-fuchsia-500', 'text-white', 'shadow-md', 'shadow-pink-300/30');
+                    btn.classList.add('bg-white', 'text-gray-600', 'border', 'border-pink-200');
+                }
+            });
+            renderProducts(filter, currentSearch);
+        }
+
+        function goToProductCategory(category) {
+            currentSearch = '';
+            const searchInput = document.getElementById('search-input');
+            if (searchInput) searchInput.value = '';
+            filterProducts(category);
+            const productsSection = document.getElementById('products');
+            if (productsSection) {
+                productsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        // ===== CART =====
+        function addToCart(id) {
+            const product = products.find(p => p.id === id);
+            const existing = cart.find(item => item.id === id);
+            if (existing) {
+                existing.qty++;
+            } else {
+                cart.push({ ...product, qty: 1 });
+            }
+            updateCart();
+            showToast(`${product.name} đã thêm vào giỏ! 🛍️`);
+        }
+
+        function removeFromCart(id) {
+            cart = cart.filter(item => item.id !== id);
+            updateCart();
+        }
+
+        function updateCartQty(id, delta) {
+            const item = cart.find(i => i.id === id);
+            if (item) {
+                item.qty += delta;
+                if (item.qty <= 0) {
+                    removeFromCart(id);
+                    return;
+                }
+            }
+            updateCart();
+        }
+
+        function updateCart() {
+            const count = cart.reduce((s, i) => s + i.qty, 0);
+            const subtotal = cart.reduce((s, i) => s + i.price * i.qty, 0);
+            const discount = getDiscountAmount(subtotal);
+            const total = Math.max(subtotal - discount, 0);
+            document.getElementById('cart-count').textContent = count;
+            document.getElementById('cart-sidebar-count').textContent = `(${count})`;
+
+            const cartEmpty = document.getElementById('cart-empty');
+            const cartList = document.getElementById('cart-list');
+            const cartFooter = document.getElementById('cart-footer');
+            const discountRow = document.getElementById('cart-discount-row');
+
+            if (cart.length === 0) {
+                appliedCouponCode = '';
+                const couponInput = document.getElementById('coupon-code-input');
+                const couponMessage = document.getElementById('coupon-message');
+                if (couponInput) couponInput.value = '';
+                if (couponMessage) couponMessage.classList.add('hidden');
+                cartEmpty.classList.remove('hidden'); cartList.classList.add('hidden'); cartFooter.classList.add('hidden');
+            } else {
+                cartEmpty.classList.add('hidden'); cartList.classList.remove('hidden'); cartFooter.classList.remove('hidden');
+                cartList.innerHTML = cart.map(item => `
+                    <div class="flex gap-3 p-3 rounded-2xl bg-gradient-to-r from-pink-50 to-fuchsia-50/50 border border-pink-100">
+                        <img src="${item.image}" alt="${item.name}" class="w-20 h-20 rounded-xl object-cover shadow-sm">
+                        <div class="flex-1 min-w-0">
+                            <h4 class="font-bold text-gray-800 text-sm truncate">${item.name}</h4>
+                            <p class="text-pink-500 font-extrabold text-sm">${formatPrice(item.price)}</p>
+                            <div class="flex items-center gap-2 mt-1.5">
+                                <button onclick="updateCartQty(${item.id},-1)" class="w-7 h-7 rounded-lg bg-white border border-pink-200 flex items-center justify-center text-pink-500 hover:bg-pink-100 text-xs font-bold transition-colors">−</button>
+                                <span class="text-sm font-bold w-6 text-center">${item.qty}</span>
+                                <button onclick="updateCartQty(${item.id},1)" class="w-7 h-7 rounded-lg bg-white border border-pink-200 flex items-center justify-center text-pink-500 hover:bg-pink-100 text-xs font-bold transition-colors">+</button>
+                            </div>
+                        </div>
+                        <button onclick="removeFromCart(${item.id})" class="text-gray-400 hover:text-red-400 self-start p-1 hover:bg-red-50 rounded-lg transition-colors">
+                            <i data-lucide="trash-2" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                `).join('');
+                document.getElementById('cart-subtotal').textContent = formatPrice(subtotal);
+                document.getElementById('cart-discount').textContent = `-${formatPrice(discount)}`;
+                discountRow.classList.toggle('hidden', discount <= 0);
+                discountRow.classList.toggle('flex', discount > 0);
+                document.getElementById('cart-total').textContent = formatPrice(total);
+                lucide.createIcons();
+            }
+        }
+
+        function getDiscountAmount(subtotal) {
+            if (!appliedCouponCode || !couponDefinitions[appliedCouponCode] || subtotal <= 0) {
+                return 0;
+            }
+            const coupon = couponDefinitions[appliedCouponCode];
+            if (coupon.type === 'percent') {
+                return Math.round((subtotal * coupon.value) / 100);
+            }
+            return Math.min(coupon.value, subtotal);
+        }
+
+        function applyCouponCode() {
+            const input = document.getElementById('coupon-code-input');
+            const messageEl = document.getElementById('coupon-message');
+            if (!input || !messageEl) return;
+
+            const code = input.value.trim().toUpperCase();
+            if (!code) {
+                messageEl.textContent = 'Vui lòng nhập mã giảm giá.';
+                messageEl.className = 'text-xs mt-2 text-red-500';
+                return;
+            }
+            if (!couponDefinitions[code]) {
+                appliedCouponCode = '';
+                messageEl.textContent = 'Mã không hợp lệ hoặc đã hết hạn.';
+                messageEl.className = 'text-xs mt-2 text-red-500';
+                updateCart();
+                return;
+            }
+
+            appliedCouponCode = code;
+            messageEl.textContent = `Áp dụng thành công: ${couponDefinitions[code].label} (${code})`;
+            messageEl.className = 'text-xs mt-2 text-green-600';
+            showToast(`Đã áp dụng mã ${code}`);
+            updateCart();
+        }
+
+        function toggleCart() {
+            const sidebar = document.getElementById('cart-sidebar');
+            const overlay = document.getElementById('cart-overlay');
+            sidebar.classList.toggle('open');
+            overlay.classList.toggle('hidden');
+        }
+
+        function openCheckout() {
+            if (cart.length === 0) {
+                showToast('Giỏ hàng đang trống, chưa thể thanh toán.');
+                return;
+            }
+            document.getElementById('checkout-modal').classList.add('active');
+            showCheckoutForm();
+            lucide.createIcons();
+        }
+
+        function closeCheckout() {
+            document.getElementById('checkout-modal').classList.remove('active');
+        }
+
+        function showCheckoutForm() {
+            document.getElementById('checkout-form-view').classList.remove('hidden');
+            document.getElementById('checkout-payment-view').classList.add('hidden');
+        }
+
+        function submitCheckoutInfo(e) {
+            e.preventDefault();
+            const name = document.getElementById('checkout-name').value.trim();
+            const phone = document.getElementById('checkout-phone').value.trim();
+            const address = document.getElementById('checkout-address').value.trim();
+            const subtotal = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+            const discount = getDiscountAmount(subtotal);
+            const total = Math.max(subtotal - discount, 0);
+            const amount = total;
+            const qrUrl = `https://img.vietqr.io/image/970407-99999999924-qr_only.png?amount=${amount}&addInfo=Tui%20Sach%20Website&accountName=DINH%20DUY%20VINH`;
+
+            document.getElementById('checkout-display-name').textContent = name;
+            document.getElementById('checkout-display-phone').textContent = phone;
+            document.getElementById('checkout-display-address').textContent = address;
+            document.getElementById('checkout-display-total').textContent = formatPrice(total);
+            document.getElementById('checkout-qr').src = qrUrl;
+
+            document.getElementById('checkout-form-view').classList.add('hidden');
+            document.getElementById('checkout-payment-view').classList.remove('hidden');
+        }
+
+        function confirmDirectPayment() {
+            showToast('Thanh toán thành công! Đơn hàng của bạn đang được xử lý.');
+            cart = [];
+            updateCart();
+            closeCheckout();
+            toggleCart();
+        }
+
+        // ===== MOBILE MENU =====
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const overlay = document.getElementById('mobile-overlay');
+            menu.classList.toggle('open');
+            overlay.classList.toggle('hidden');
+        }
+
+        // ===== SEARCH =====
+        function toggleSearch() {
+            const bar = document.getElementById('search-bar');
+            bar.classList.toggle('hidden');
+        }
+
+        function handleSearch(keyword) {
+            currentSearch = keyword;
+            renderProducts(currentFilter, currentSearch);
+        }
+
+        // ===== QUICK VIEW =====
+        function openQuickView(id) {
+            const product = products.find(p => p.id === id);
+            const modal = document.getElementById('quick-view-modal');
+            const inner = document.getElementById('modal-content-inner');
+            
+            inner.innerHTML = `
+                <div class="flex justify-between items-start mb-4">
+                    <span class="px-3 py-1 rounded-full text-xs font-bold text-white ${
+                        product.tag === 'Hot' ? 'bg-gradient-to-r from-orange-400 to-red-500' :
+                        product.tag === 'Sale' ? 'bg-gradient-to-r from-pink-500 to-fuchsia-500' :
+                        'bg-gradient-to-r from-green-400 to-emerald-500'
+                    }">${product.tag || 'HAPAS'}</span>
+                    <button onclick="closeQuickView()" class="p-2 rounded-full hover:bg-pink-100 text-gray-500 hover:text-pink-500">
+                        <i data-lucide="x" class="w-5 h-5"></i>
+                    </button>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="rounded-2xl overflow-hidden">
+                        <img src="${product.image}" alt="${product.name}" class="w-full h-64 md:h-80 object-cover">
+                    </div>
+                    <div>
+                        <h2 class="font-display text-2xl font-bold text-gray-800 mb-2">${product.name}</h2>
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="font-bold text-2xl text-pink-500">${formatPrice(product.price)}</span>
+                            <span class="text-gray-400 line-through">${formatPrice(product.originalPrice)}</span>
+                            <span class="text-xs text-green-600 font-bold bg-green-50 px-2 py-1 rounded-full">
+                                -${Math.round((1 - product.price/product.originalPrice) * 100)}%
+                            </span>
+                        </div>
+                        <p class="text-gray-600 mb-4 leading-relaxed">${product.desc}</p>
+                        <div class="mb-4">
+                            <p class="text-sm font-semibold text-gray-700 mb-2">Màu sắc:</p>
+                            <div class="flex gap-2">
+                                ${product.colors.map((c, i) => `
+                                    <button class="w-8 h-8 rounded-full border-2 ${i === 0 ? 'border-pink-500' : 'border-gray-200'} hover:border-pink-400 transition-colors" style="background:${c}"></button>
+                                `).join('')}
+                            </div>
+                        </div>
+                        <div class="flex gap-3 mt-6">
+                            <button onclick="addToCart(${product.id}); closeQuickView();" 
+                                class="flex-1 py-3 rounded-xl shimmer-bg text-white font-bold shadow-lg shadow-pink-300/30 hover:shadow-pink-400/50 transition-shadow flex items-center justify-center gap-2">
+                                <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                                Thêm Vào Giỏ
+                            </button>
+                            <button onclick="toggleWishlist(${product.id}, this)" class="px-4 py-3 rounded-xl border-2 border-pink-300 text-pink-500 hover:bg-pink-50 transition-colors">
+                                <i data-lucide="heart" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            modal.classList.add('active');
+            lucide.createIcons();
+        }
+
+        function closeQuickView() {
+            document.getElementById('quick-view-modal').classList.remove('active');
+        }
+
+        // Close modal on overlay click
+        document.getElementById('quick-view-modal').addEventListener('click', function(e) {
+            if (e.target === this) closeQuickView();
+        });
+        document.getElementById('checkout-modal').addEventListener('click', function(e) {
+            if (e.target === this) closeCheckout();
+        });
+
+        // ===== WISHLIST =====
+        function toggleWishlist(id, btn) {
+            if (wishlistIds.has(id)) {
+                wishlistIds.delete(id);
+                showToast('Đã xóa khỏi danh sách yêu thích');
+            } else {
+                wishlistIds.add(id);
+                showToast('Đã thêm vào yêu thích ♡');
+            }
+            const wcEl = document.getElementById('wish-count');
+            if (wishlistIds.size > 0) { wcEl.textContent = wishlistIds.size; wcEl.classList.remove('hidden'); }
+            else { wcEl.classList.add('hidden'); }
+            // Update button appearance
+            if (btn) {
+                const icon = btn.querySelector('[data-lucide]');
+                if (wishlistIds.has(id)) {
+                    btn.classList.remove('text-gray-700', 'text-pink-500', 'hover:text-pink-500', 'bg-white/90', 'hover:bg-white');
+                    btn.classList.add('bg-gradient-to-br', 'from-pink-500', 'to-fuchsia-500', 'text-white');
+                    if (icon) icon.classList.add('fill-current');
+                } else {
+                    btn.classList.remove('bg-gradient-to-br', 'from-pink-500', 'to-fuchsia-500', 'text-white');
+                    btn.classList.add('text-gray-700', 'hover:text-pink-500', 'bg-white/90', 'hover:bg-white');
+                    if (icon) icon.classList.remove('fill-current');
+                }
+            }
+        }
+
+        function showAllProducts() {
+            isShowingAllProducts = true;
+            currentSearch = '';
+            const searchInput = document.getElementById('search-input');
+            if (searchInput) searchInput.value = '';
+            filterProducts('all');
+        }
+
+        // ===== TOAST =====
+        function showToast(message) {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            toast.className = 'toast bg-white rounded-xl px-5 py-3 shadow-xl shadow-pink-200/50 border border-pink-100 flex items-center gap-3 min-w-[250px]';
+            toast.innerHTML = `
+                <div class="w-8 h-8 rounded-full bg-gradient-to-br from-pink-400 to-fuchsia-400 flex items-center justify-center shrink-0">
+                    <i data-lucide="check" class="w-4 h-4 text-white"></i>
+                </div>
+                <p class="text-sm font-medium text-gray-700">${message}</p>
+            `;
+            container.appendChild(toast);
+            lucide.createIcons();
+            
+            setTimeout(() => {
+                toast.classList.add('toast-exit');
+                setTimeout(() => toast.remove(), 300);
+            }, 3000);
+        }
+
+        // ===== SUPPORT CHAT =====
+        function appendSupportMessage(text, sender = 'support') {
+            const messagesEl = document.getElementById('support-chat-messages');
+            if (!messagesEl) return;
+
+            const row = document.createElement('div');
+            row.className = `flex ${sender === 'user' ? 'justify-end' : 'justify-start'}`;
+
+            const bubble = document.createElement('div');
+            bubble.className = sender === 'user'
+                ? 'max-w-[85%] rounded-2xl rounded-br-md px-3 py-2 text-sm bg-gradient-to-r from-pink-500 to-fuchsia-500 text-white'
+                : 'max-w-[85%] rounded-2xl rounded-bl-md px-3 py-2 text-sm bg-white border border-pink-100 text-gray-700';
+            bubble.textContent = text;
+
+            row.appendChild(bubble);
+            messagesEl.appendChild(row);
+            messagesEl.scrollTop = messagesEl.scrollHeight;
+        }
+
+        function getSupportAutoReply(message) {
+            const text = message.toLowerCase();
+            if (text.includes('ship') || text.includes('giao')) {
+                return 'Shop miễn phí ship toàn quốc cho đơn từ 699.000đ, giao trong 2-4 ngày làm việc.';
+            }
+            if (text.includes('đổi') || text.includes('trả') || text.includes('bao hanh') || text.includes('bảo hành')) {
+                return 'Bên mình hỗ trợ đổi trả trong 7 ngày và bảo hành 12 tháng cho lỗi từ nhà sản xuất.';
+            }
+            if (text.includes('giảm') || text.includes('mã') || text.includes('khuyến mãi')) {
+                return 'Bạn có thể dùng mã HAPAS20 để giảm 20% hoặc FREESHIP50 để giảm 50.000đ nhé.';
+            }
+            return 'Cảm ơn bạn đã nhắn tin. Tư vấn viên sẽ phản hồi sớm, hoặc bạn để lại SĐT để shop hỗ trợ nhanh hơn nhé.';
+        }
+
+        function toggleSupportChat() {
+            const panel = document.getElementById('support-chat-panel');
+            const input = document.getElementById('support-chat-input');
+            if (!panel) return;
+
+            panel.classList.toggle('hidden');
+            if (!panel.classList.contains('hidden')) {
+                if (!supportChatSeeded) {
+                    appendSupportMessage('Xin chào bạn 👋 HAPAS có thể hỗ trợ gì cho bạn hôm nay?');
+                    supportChatSeeded = true;
+                }
+                if (input) input.focus();
+            }
+        }
+
+        function sendSupportMessage() {
+            const input = document.getElementById('support-chat-input');
+            if (!input) return;
+
+            const message = input.value.trim();
+            if (!message) return;
+
+            appendSupportMessage(message, 'user');
+            input.value = '';
+
+            const reply = getSupportAutoReply(message);
+            window.setTimeout(() => appendSupportMessage(reply, 'support'), 500);
+        }
+
+        function sendSupportQuickReply(message) {
+            const input = document.getElementById('support-chat-input');
+            if (!input) return;
+            input.value = message;
+            sendSupportMessage();
+        }
+
+        function handleSupportKeydown(e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                sendSupportMessage();
+            }
+        }
+
+        // ===== COUNTDOWN =====
+        function startCountdown() {
+            let totalSeconds = 12 * 3600 + 45 * 60 + 30;
+            
+            function update() {
+                const h = Math.floor(totalSeconds / 3600);
+                const m = Math.floor((totalSeconds % 3600) / 60);
+                const s = totalSeconds % 60;
+                
+                document.getElementById('countdown-hours').textContent = String(h).padStart(2, '0');
+                document.getElementById('countdown-minutes').textContent = String(m).padStart(2, '0');
+                document.getElementById('countdown-seconds').textContent = String(s).padStart(2, '0');
+                
+                if (totalSeconds > 0) totalSeconds--;
+                else totalSeconds = 12 * 3600 + 45 * 60 + 30;
+            }
+            
+            update();
+            setInterval(update, 1000);
+        }
+
+        // ===== NEWSLETTER =====
+        function handleSubscribe(e) {
+            e.preventDefault();
+            const email = document.getElementById('email-input').value;
+            showToast(`Đăng ký thành công! 🎉 Kiểm tra email: ${email}`);
+            document.getElementById('email-input').value = '';
+        }
+
+        // ===== SCROLL ANIMATIONS =====
+        function initScrollAnimations() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+            document.querySelectorAll('.animate-on-scroll').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // ===== BACK TO TOP =====
+        function initBackToTop() {
+            const btn = document.getElementById('back-to-top');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 500) {
+                    btn.classList.remove('opacity-0', 'translate-y-4');
+                    btn.classList.add('opacity-100', 'translate-y-0');
+                } else {
+                    btn.classList.add('opacity-0', 'translate-y-4');
+                    btn.classList.remove('opacity-100', 'translate-y-0');
+                }
+            });
+        }
+
+        // ===== SMOOTH SCROLL =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // ===== NAVBAR SCROLL EFFECT =====
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-lg', 'shadow-pink-100/30');
+            } else {
+                nav.classList.remove('shadow-lg', 'shadow-pink-100/30');
+            }
+        });
+
+        // ===== INIT =====
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+            isShowingAllProducts = false;
+            filterProducts('all');
+            startCountdown();
+            initScrollAnimations();
+            initBackToTop();
+            const showAllBtn = document.getElementById('show-all-products-btn');
+            if (showAllBtn) {
+                showAllBtn.addEventListener('click', showAllProducts);
+            }
+        });
+    </script>
+</body>
+</html>
