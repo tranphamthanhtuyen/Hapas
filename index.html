@@ -410,11 +410,17 @@
 
     <!-- Hero Section -->
     <section id="home" class="relative min-h-screen flex items-center overflow-hidden">
-        <!-- Background -->
-        <div class="absolute inset-0 bg-gradient-to-br from-pink-50 via-white to-purple-50"></div>
+        <!-- Background Slider -->
+        <div id="hero-slider" class="absolute inset-0">
+            <div data-hero-bg class="absolute inset-0 bg-cover bg-center transition-opacity duration-700" style="background-image: url('https://cdn.hstatic.net/themes/200000978078/1001412493/14/slide_1_img.jpg?v=333');"></div>
+            <div data-hero-bg class="absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0" style="background-image: url('https://cdn.hstatic.net/themes/200000978078/1001412493/14/slide_2_img.jpg?v=333');"></div>
+            <div data-hero-bg class="absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0" style="background-image: url('https://cdn.hstatic.net/files/200000978078/collection/banner_1_52bb44b8f470499cb5754511cc74f10e.png');"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-pink-900/35 via-pink-900/20 to-transparent"></div>
+            <div class="absolute inset-0 bg-white/18"></div>
+        </div>
 
         <!-- Decorative Blobs -->
-        <div class="absolute top-20 -left-32 w-96 h-96 bg-gradient-to-br from-pink-300/40 to-fuchsia-300/30 rounded-full blur-3xl blob-animation"></div>
+        <!-- <div class="absolute top-20 -left-32 w-96 h-96 bg-gradient-to-br from-pink-300/40 to-fuchsia-300/30 rounded-full blur-3xl blob-animation"></div>
         <div class="absolute bottom-10 -right-32 w-80 h-80 bg-gradient-to-br from-rose-300/30 to-pink-300/40 rounded-full blur-3xl blob-animation" style="animation-delay: -4s;"></div>
         <div class="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-br from-fuchsia-200/20 to-pink-200/20 rounded-full blur-2xl blob-animation" style="animation-delay: -2s;"></div>
         <div class="absolute top-20 -left-32 w-96 h-96 bg-pink-200/30 blob animate-float"></div>
@@ -422,22 +428,21 @@
         <div class="absolute top-1/2 left-1/3 w-64 h-64 bg-orange-100/30 blob animate-float-slow"></div>
         <div class="absolute top-32 right-1/4 w-20 h-20 bg-pink-300/40 rounded-full animate-bounce-soft"></div>
         <div class="absolute bottom-32 left-1/4 w-14 h-14 bg-lavender/50 rounded-full animate-bounce-soft" style="animation-delay: 0.5s"></div>
-        <div class="absolute top-1/3 right-16 w-10 h-10 bg-peach/60 rounded-full animate-bounce-soft" style="animation-delay: 1s"></div>
+        <div class="absolute top-1/3 right-16 w-10 h-10 bg-peach/60 rounded-full animate-bounce-soft" style="animation-delay: 1s"></div> -->
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-0 w-full">
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-0 w-full">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <!-- Text Content -->
-                <div class="relative z-10 order-2 lg:order-1">
+                <div id="hero-main-content" class="relative z-10 order-2 lg:order-1 transition-opacity duration-500">
                     <div class="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm rounded-full px-5 py-2.5 border border-pink-200 mb-6 shadow-lg shadow-pink-200/30">
                         <span class="flex h-2.5 w-2.5 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-pink-500"></span></span>
                         <span class="text-sm font-bold text-pink-600">Bộ sưu tập mới 2026</span>
                     </div>
                     <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-6">
-                        <span class="text-gray-800">Phong Cách</span><br>
+                        <span class="text-white">Phong Cách</span><br>
                         <span class="gradient-text">Rạng Rỡ</span><br>
-                        <span class="text-gray-800">Của Bạn</span>
+                        <span class="text-white">Của Bạn</span>
                     </h1>
-                    <p class="text-gray-600 text-lg max-w-md mb-8 leading-relaxed">
+                    <p class="text-white/90 text-lg max-w-md mb-8 leading-relaxed">
                         Khám phá bộ sưu tập túi xách cao cấp — nơi phong cách gặp gỡ sự tinh tế, hoàn thiện vẻ đẹp của mọi phái đẹp.
                     </p>
                     <div class="animate-slide-up-delay2 flex flex-wrap gap-4">
@@ -450,33 +455,28 @@
                             Câu chuyện thương hiệu
                         </a>
                     </div>
-                    <!-- Stats -->
                     <div class="flex gap-8 mt-12">
                         <div>
                             <div class="text-2xl md:text-3xl font-bold gradient-text">500+</div>
-                            <div class="text-xs text-gray-400 mt-1">Mẫu túi xách</div>
+                            <div class="text-xs text-white/50 mt-1">Mẫu túi xách</div>
                         </div>
                         <div>
                             <div class="text-2xl md:text-3xl font-bold gradient-text">50K+</div>
-                            <div class="text-xs text-gray-400 mt-1">Khách hàng tin tưởng</div>
+                            <div class="text-xs text-white/50 mt-1">Khách hàng tin tưởng</div>
                         </div>
                         <div>
                             <div class="text-2xl md:text-3xl font-bold gradient-text">4.9★</div>
-                            <div class="text-xs text-gray-400 mt-1">Đánh giá trung bình</div>
+                            <div class="text-xs text-white/50 mt-1">Đánh giá trung bình</div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Hero Image -->
-                <div class="relative order-1 lg:order-2 flex justify-center">
+                <!-- <div class="relative order-1 lg:order-2 flex justify-center">
                     <div class="relative">
-                        <!-- Main Image -->
                         <div class="relative z-10 w-72 sm:w-80 lg:w-96 h-96 lg:h-[500px] rounded-3xl overflow-hidden shadow-2xl shadow-pink-300/30 float-animation">
                             <img src="https://cdn.hstatic.net/themes/200000978078/1001412493/14/slide_1_img.jpg?v=330" alt="duyvinh09" class="w-full h-full object-cover">
                         </div>
-                        <!-- Decorative elements -->
                         <div class="absolute -top-3 -right-3 w-72 sm:w-80 lg:w-[420px] h-96 lg:h-[520px] rounded-[2rem] border-2 border-dashed border-pink-300/40 z-0"></div>
-                        <!-- Small floating card -->
                         <div class="absolute -bottom-6 -left-6 sm:-left-12 z-20 bg-white rounded-2xl p-4 shadow-xl shadow-pink-200/40 float-reverse border border-pink-100">
                             <div class="flex items-center gap-3">
                                 <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-400 to-fuchsia-500 flex items-center justify-center shadow-md shadow-pink-300/30">
@@ -488,7 +488,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Price tag -->
                         <div class="absolute -top-4 -left-4 sm:-left-10 z-20 bg-white rounded-2xl p-3 shadow-xl shadow-pink-200/40 float-animation border border-pink-100" style="animation-delay:-2s">
                             <div class="flex items-center gap-2">
                                 <div class="w-10 h-10 rounded-full bg-gradient-to-br from-rose-400 to-pink-500 flex items-center justify-center text-white font-bold text-sm">
@@ -500,7 +499,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Floating card: rating -->
                         <div class="absolute top-8 -right-4 sm:-right-10 z-20 bg-white rounded-2xl p-3 shadow-xl shadow-pink-200/40 float-animation border border-pink-100" style="animation-delay:-4s">
                             <div class="flex items-center gap-2">
                                 <div class="flex text-yellow-400 text-xs">★★★★★</div>
@@ -508,15 +506,23 @@
                             </div>
                             <p class="text-[10px] text-gray-400 mt-0.5">2.3K đánh giá</p>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
-        </div>
 
-        <!-- Scroll indicator -->
-        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
-            <span class="text-xs text-gray-400 font-medium">Cuộn xuống</span>
-            <i data-lucide="chevron-down" class="w-5 h-5 text-pink-400"></i>
+            <div class="absolute bottom-4 left-1/2 -translate-x-1/2 z-30 flex items-center gap-3">
+                <button id="hero-prev" type="button" class="w-10 h-10 rounded-full bg-white/70 hover:bg-white/85 text-pink-500 backdrop-blur-sm flex items-center justify-center transition-colors" aria-label="Slide trước">
+                    <i data-lucide="chevron-left" class="w-4 h-4"></i>
+                </button>
+                <div id="hero-dots" class="flex items-center gap-2">
+                    <button type="button" data-hero-dot="0" class="w-2.5 h-2.5 rounded-full bg-pink-500" aria-label="Đi đến slide 1"></button>
+                    <button type="button" data-hero-dot="1" class="w-2.5 h-2.5 rounded-full bg-pink-200 hover:bg-pink-300 transition-colors" aria-label="Đi đến slide 2"></button>
+                    <button type="button" data-hero-dot="2" class="w-2.5 h-2.5 rounded-full bg-pink-200 hover:bg-pink-300 transition-colors" aria-label="Đi đến slide 3"></button>
+                </div>
+                <button id="hero-next" type="button" class="w-10 h-10 rounded-full bg-white/70 hover:bg-white/85 text-pink-500 backdrop-blur-sm flex items-center justify-center transition-colors" aria-label="Slide tiếp theo">
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </button>
+            </div>
         </div>
     </section>
 
@@ -540,6 +546,15 @@
 
     <!-- About Section -->
     <section id="about" class="py-20 md:py-32 bg-white relative overflow-hidden">
+        <div class="absolute top-20 -left-32 w-96 h-96 bg-gradient-to-br from-pink-300/40 to-fuchsia-300/30 rounded-full blur-3xl blob-animation"></div>
+        <div class="absolute bottom-10 -right-32 w-80 h-80 bg-gradient-to-br from-rose-300/30 to-pink-300/40 rounded-full blur-3xl blob-animation" style="animation-delay: -4s;"></div>
+        <div class="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-br from-fuchsia-200/20 to-pink-200/20 rounded-full blur-2xl blob-animation" style="animation-delay: -2s;"></div>
+        <div class="absolute top-20 -left-32 w-96 h-96 bg-pink-200/30 blob animate-float"></div>
+        <div class="absolute bottom-10 -right-32 w-80 h-80 bg-purple-200/30 blob animate-float-delay"></div>
+        <div class="absolute top-1/2 left-1/3 w-64 h-64 bg-orange-100/30 blob animate-float-slow"></div>
+        <div class="absolute top-32 right-1/4 w-20 h-20 bg-pink-300/40 rounded-full animate-bounce-soft"></div>
+        <div class="absolute bottom-32 left-1/4 w-14 h-14 bg-lavender/50 rounded-full animate-bounce-soft" style="animation-delay: 0.5s"></div>
+        <div class="absolute top-1/3 right-16 w-10 h-10 bg-peach/60 rounded-full animate-bounce-soft" style="animation-delay: 1s"></div>
         <div class="absolute top-0 right-0 w-72 h-72 bg-pink-50 rounded-full -translate-y-1/2 translate-x-1/2"></div>
         <div class="absolute bottom-0 left-0 w-96 h-96 bg-purple-50 rounded-full translate-y-1/2 -translate-x-1/2"></div>
         
@@ -550,18 +565,18 @@
                 <div class="grid grid-cols-2 gap-4">
                     <div class="space-y-4">
                         <div class="rounded-2xl overflow-hidden h-48 shadow-lg">
-                            <img src="https://file.hstatic.net/200000978078/file/t_i_tr_ng_1024x1024.png" alt="" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700">
+                            <img src="https://i.ibb.co/3ZsCQx4/t-i-x-ch.jpg" alt="" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700">
                         </div>
                         <div class="rounded-2xl overflow-hidden h-64 shadow-lg">
-                            <img src="https://file.hstatic.net/200000978078/file/_nh_1024x1024.png" alt="" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700">
+                            <img src="https://i.ibb.co/rKPsdTbr/605662653-1219526793611794-1423139532905942839-n.jpg" alt="" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700">
                         </div>
                     </div>
                     <div class="space-y-4 pt-8">
                         <div class="rounded-2xl overflow-hidden h-64 shadow-lg">
-                            <img src="https://file.hstatic.net/200000978078/file/_nh__1__1024x1024.png" alt="" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700">
+                            <img src="https://i.ibb.co/7J4gYLfh/599470435-1206499864914487-3224053070879857489-n.jpg" alt="" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700">
                         </div>
                         <div class="rounded-2xl overflow-hidden h-48 shadow-lg">
-                            <img src="https://file.hstatic.net/200000978078/article/chain_handle__3__7212e50d5fb04a58ab65b14a18d2859d_large.png" alt="" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700">
+                            <img src="https://i.ibb.co/jPBkG1TQ/626821929-1243295971234876-8894411235257726273-n.jpg" alt="" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700">
                         </div>
                     </div>
                 </div>
@@ -582,15 +597,15 @@
                     Về <span class="gradient-text">HAPAS</span>
                 </h2>
                 <p class="text-gray-600 text-lg leading-relaxed mb-5">
-                    HAPAS ra đời với sứ mệnh mang đến cho phụ nữ Việt Nam những chiếc túi xách không chỉ là phụ kiện, mà còn là <span class="text-pink-500 font-semibold">biểu tượng của phong cách</span> và sự tự tin.
+                    Mỗi chiếc túi xách HAPAS không chỉ là một phụ kiện, mà là kết tinh của tâm huyết, sự tỉ mỉ và đam mê của những người lành nghề. Với <span class="text-pink-500 font-semibold">hơn 10 năm kinh nghiệm</span>, HAPAS không ngừng hoàn thiện từng thiết kế để mang đến sự cân bằng giữa vẻ đẹp tối giản và tính ứng dụng trong đời sống hằng ngày. Mỗi sản phẩm đều ẩn chứa một câu chuyện – về sự tinh tế, về phong cách và về cá tính riêng của người phụ nữ hiện đại.
                 </p>
                 <p class="text-gray-500 leading-relaxed mb-8">
-                    Với hơn 10 năm kinh nghiệm, chúng tôi tự hào mang đến những sản phẩm được chế tác tỉ mỉ từ chất liệu cao cấp, kết hợp giữa nét truyền thống và xu hướng thời trang hiện đại. Mỗi chiếc túi là một câu chuyện, mỗi thiết kế là một tuyên ngôn về cái đẹp.
+                    HAPAS tin rằng, một chiếc túi không chỉ để mang theo, mà còn để thể hiện. Khi bạn lựa chọn HAPAS, bạn không chỉ theo đuổi thời trang, mà đang kể câu chuyện của chính mình - <span class="text-pink-500 font-semibold"> nhẹ nhàng nhưng khác biệt, đơn giản nhưng đầy cảm hứng</span>.
                 </p>
               
                 <!-- Features -->
                 <div class="grid grid-cols-2 gap-4 mb-8">
-                    <div class="flex items-start gap-3 p-3 rounded-xl bg-pink-50/50">
+                    <div class="flex items-start gap-3 p-3 rounded-xl bg-pink-100/50">
                         <div class="w-8 h-8 rounded-lg bg-pink-100 flex items-center justify-center flex-shrink-0 mt-0.5">
                             <iconify-icon icon="lucide:leaf" width="16" class="text-pink-600"></iconify-icon>
                         </div>
@@ -599,7 +614,7 @@
                             <div class="text-xs text-gray-400 mt-0.5">Nhập khẩu Ý</div>
                         </div>
                     </div>
-                    <div class="flex items-start gap-3 p-3 rounded-xl bg-purple-50/50">
+                    <div class="flex items-start gap-3 p-3 rounded-xl bg-purple-100/50">
                         <div class="w-8 h-8 rounded-lg bg-purple-100 flex items-center justify-center flex-shrink-0 mt-0.5">
                             <iconify-icon icon="lucide:scissors" width="16" class="text-purple-600"></iconify-icon>
                         </div>
@@ -608,7 +623,7 @@
                             <div class="text-xs text-gray-400 mt-0.5">Mỗi chi tiết tỉ mỉ</div>
                         </div>
                     </div>
-                    <div class="flex items-start gap-3 p-3 rounded-xl bg-orange-50/50">
+                    <div class="flex items-start gap-3 p-3 rounded-xl bg-orange-100/50">
                         <div class="w-8 h-8 rounded-lg bg-orange-100 flex items-center justify-center flex-shrink-0 mt-0.5">
                             <iconify-icon icon="lucide:palette" width="16" class="text-orange-600"></iconify-icon>
                         </div>
@@ -617,7 +632,7 @@
                             <div class="text-xs text-gray-400 mt-0.5">20+ tone màu</div>
                         </div>
                     </div>
-                    <div class="flex items-start gap-3 p-3 rounded-xl bg-green-50/50">
+                    <div class="flex items-start gap-3 p-3 rounded-xl bg-green-100/50">
                         <div class="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
                             <iconify-icon icon="lucide:recycle" width="16" class="text-green-600"></iconify-icon>
                         </div>
@@ -649,7 +664,7 @@
 
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
                 <div onclick="goToProductCategory('handbag')" class="category-card relative rounded-2xl overflow-hidden h-64 lg:h-80 cursor-pointer group animate-on-scroll">
-                    <img src="https://file.hstatic.net/200000978078/file/denim1_402306f2df9245ec87416290f8b2dab6.png" alt="Túi Xách Tay" class="absolute inset-0 w-full h-full object-cover">
+                    <img src="https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/631617233_1253366406894499_6990613302189780457_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=7b2446&_nc_ohc=UH3edDKimyQQ7kNvwGh7Z4g&_nc_oc=AdoE9c4EIwyk05Tzg4XGctiCCWB91IeV0zcsx60n5Du2Lqjnxgcfz2LYPRY4YpX3j8r82dJ1t_VjLKOJHs6AT3cP&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=bk9-slDUKy2tHXzUi2SW7w&_nc_ss=7a3a8&oh=00_Af3mZ1wB5h6j5i0UlJH30gr2aagmAICuwnK5NEaTw-TGrA&oe=69EE2A34" alt="Túi Xách Tay" class="absolute inset-0 w-full h-full object-cover">
                     <div class="absolute bottom-0 left-0 right-0 p-4 lg:p-5 z-10">
                         <h3 class="text-white font-display font-bold text-lg lg:text-xl">Túi Xách Tay</h3>
                         <p class="text-white/80 text-sm mt-0.5">120+ mẫu thiết kế</p>
@@ -659,19 +674,19 @@
                     </div>
                 </div>
                 <div onclick="goToProductCategory('crossbody')" class="category-card relative rounded-2xl overflow-hidden h-64 lg:h-80 cursor-pointer group animate-on-scroll">
-                    <img src="https://file.hstatic.net/200000978078/file/img_1812__1_.jpeg" alt="Túi Đeo Chéo" class="absolute inset-0 w-full h-full object-cover">
+                    <img src="https://file.hstatic.net/200000978078/file/img_1812__1_.jpeg" alt="Túi Đeo Vai" class="absolute inset-0 w-full h-full object-cover">
                     <div class="absolute bottom-0 left-0 right-0 p-4 lg:p-5 z-10">
-                        <h3 class="text-white font-display font-bold text-lg lg:text-xl">Túi Đeo Chéo</h3>
+                        <h3 class="text-white font-display font-bold text-lg lg:text-xl">Túi Đeo Vai</h3>
                         <p class="text-white/80 text-sm mt-0.5">85+ mẫu thiết kế</p>
                     </div>
                     <div class="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
                         <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
                     </div>
                 </div>
-                <div onclick="goToProductCategory('backpack')" class="category-card relative rounded-2xl overflow-hidden h-64 lg:h-80 cursor-pointer group animate-on-scroll">
-                    <img src="https://file.hstatic.net/200000978078/file/10.jpg" alt="Balo Nữ" class="absolute inset-0 w-full h-full object-cover">
+                <div onclick="goToProductCategory('tote')" class="category-card relative rounded-2xl overflow-hidden h-64 lg:h-80 cursor-pointer group animate-on-scroll">
+                    <img src="https://file.hstatic.net/200000978078/file/600x800.png" alt="Túi Tote" class="absolute inset-0 w-full h-full object-cover">
                     <div class="absolute bottom-0 left-0 right-0 p-4 lg:p-5 z-10">
-                        <h3 class="text-white font-display font-bold text-lg lg:text-xl">Balo Nữ</h3>
+                        <h3 class="text-white font-display font-bold text-lg lg:text-xl">Túi Tote</h3>
                         <p class="text-white/80 text-sm mt-0.5">60+ mẫu thiết kế</p>
                     </div>
                     <div class="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
@@ -679,7 +694,7 @@
                     </div>
                 </div>
                 <div onclick="goToProductCategory('clutch')" class="category-card relative rounded-2xl overflow-hidden h-64 lg:h-80 cursor-pointer group animate-on-scroll">
-                    <img src="https://file.hstatic.net/200000978078/file/pi.png" alt="Ví & Clutch" class="absolute inset-0 w-full h-full object-cover">
+                    <img src="https://cdn.hstatic.net/products/200000978078/hapas110641_4bba1a7fe48a4dd7ac5967085db782cd_master.jpg" alt="Ví & Clutch" class="absolute inset-0 w-full h-full object-cover">
                     <div class="absolute bottom-0 left-0 right-0 p-4 lg:p-5 z-10">
                         <h3 class="text-white font-display font-bold text-lg lg:text-xl">Ví & Clutch</h3>
                         <p class="text-white/80 text-sm mt-0.5">95+ mẫu thiết kế</p>
@@ -716,13 +731,16 @@
                     Túi Xách Tay
                 </button>
                 <button onclick="filterProducts('crossbody')" class="filter-btn px-6 py-2 rounded-full text-sm font-semibold transition-all" data-filter="crossbody">
-                    Túi Đeo Chéo
+                    Túi Đeo Vai
                 </button>
-                <button onclick="filterProducts('backpack')" class="filter-btn px-6 py-2 rounded-full text-sm font-semibold transition-all" data-filter="backpack">
-                    Balo Nữ
+                <button onclick="filterProducts('tote')" class="filter-btn px-6 py-2 rounded-full text-sm font-semibold transition-all" data-filter="tote">
+                    Túi Tote
                 </button>
                 <button onclick="filterProducts('clutch')" class="filter-btn px-6 py-2 rounded-full text-sm font-semibold transition-all" data-filter="clutch">
                     Ví & Clutch
+                </button>
+                <button onclick="filterProducts('combo-set')" class="filter-btn px-6 py-2 rounded-full text-sm font-semibold transition-all" data-filter="combo-set">
+                    Combo Sản Phẩm
                 </button>
             </div>
 
@@ -737,6 +755,38 @@
                     Xem Tất Cả Sản Phẩm
                     <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
                 </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promo Banner -->
+    <section class="py-20 md:py-24 bg-gradient-to-b from-white to-pink-100/80">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-5 fade-up">
+                <a href="#products" onclick="openProductGroup('all'); return false;" class="category-card relative rounded-3xl overflow-hidden h-64 md:h-80 group cursor-pointer block animate-on-scroll">
+                    <img src="https://cdn.hstatic.net/files/200000978078/file/2_43b331b25e38414bb91cc9baa1a38639_master.png" alt="Sản phẩm được yêu thích nhất" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 p-8 md:p-12 flex flex-col justify-center z-10">
+                        <span class="inline-flex items-center gap-1.5 text-white/95 font-bold text-xs uppercase tracking-wider mb-3 w-fit drop-shadow-md">
+                            <span class="w-6 h-px bg-white/90"></span> Nổi bật
+                        </span>
+                        <h3 class="text-2xl md:text-3xl font-extrabold text-white drop-shadow-[0_3px_12px_rgba(0,0,0,0.55)] font-display leading-tight">SP được yêu thích nhất</h3>
+                        <span class="group/link inline-flex items-center gap-1.5 text-white/95 font-bold mt-5 text-sm hover:text-white transition w-fit drop-shadow-md">
+                            Khám phá ngay <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
+                        </span>
+                    </div>
+                </a>
+                <a href="#products" onclick="openProductGroup('combo-set'); return false;" class="category-card relative rounded-3xl overflow-hidden h-64 md:h-80 group cursor-pointer block animate-on-scroll">
+                    <img src="https://cdn.hstatic.net/files/200000978078/file/1_9a9b583ef5c345f29f40db3fa950f000_master.png" alt="Combo quà tặng" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 p-8 md:p-12 flex flex-col justify-center z-10">
+                        <span class="inline-flex items-center gap-1.5 text-white/95 font-bold text-xs uppercase tracking-wider mb-3 w-fit drop-shadow-md">
+                            <span class="w-6 h-px bg-white/90"></span> Quà tặng
+                        </span>
+                        <h3 class="text-2xl md:text-3xl font-extrabold text-white drop-shadow-[0_3px_12px_rgba(0,0,0,0.55)] font-display leading-tight">Combo quà tặng</h3>
+                        <span class="group/link inline-flex items-center gap-1.5 text-white/95 font-bold mt-5 text-sm hover:text-white transition w-fit drop-shadow-md">
+                            Mua ngay <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
+                        </span>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
@@ -1112,7 +1162,7 @@
                     <ul class="space-y-2">
                         <li><a href="#" class="text-gray-400 hover:text-pink-400 text-sm transition-colors">Túi Xách Tay</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-pink-400 text-sm transition-colors">Túi Đeo Chéo</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-pink-400 text-sm transition-colors">Balo Nữ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-400 text-sm transition-colors">Túi Tote</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-pink-400 text-sm transition-colors">Ví & Clutch</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-pink-400 text-sm transition-colors">Phụ Kiện</a></li>
                     </ul>
@@ -1212,116 +1262,200 @@
         // ===== PRODUCTS DATA =====
         const products = [
             {
-                id: 1, name: "Túi Xách Tay Candy", category: "handbag",
-                price: 1290000, originalPrice: 1890000,
-                image: "https://cdn.hstatic.net/products/200000978078/_bac0836_0cf57dc33dbc41a09e617e267166e089_master.jpg",
-                tag: "Hot", colors: ["#FF3D6B", "#8C003A", "#000"],
-                desc: "Túi xách tay sang trọng với chất liệu da thật cao cấp, thiết kế tối giản thanh lịch."
-            },
-            {
-                id: 2, name: "Túi Xách Tay Phủ Màu Tag Vuông", category: "handbag",
-                price: 990000, originalPrice: 1490000,
-                image: "https://product.hstatic.net/200000978078/product/img_7804_-_copy_895efdf02122472da0177d637a60f3af_master.jpg",
-                tag: "Sale", colors: ["#FF6B8A", "#FFA0B4", "#FFF"],
-                desc: "Túi xách tay phong cách nhẹ nhàng, nữ tính với gam màu hồng pastel."
-            },
-            {
-                id: 3, name: "Túi Xách Tay Mini Dáng Hộp Lock Chic", category: "crossbody",
-                price: 890000, originalPrice: 1290000,
-                image: "https://cdn.hstatic.net/products/200000978078/_bac1124_-_copy_53b2fe282d304deba1226589f7cc248e_master.jpg",
-                tag: "Mới", colors: ["#FF8C42", "#FFB347", "#FFF"],
-                desc: "Túi đeo chéo nhỏ gọn, tiện lợi, phù hợp đi chơi và dạo phố."
-            },
-            {
-                id: 4, name: "Ví Dài Da Vân Top Zip", category: "clutch",
-                price: 690000, originalPrice: 990000,
-                image: "https://product.hstatic.net/200000978078/product/img_2817_0581f997fef6427da3ee1e88956c35d6_master.jpg",
-                tag: "Hot", colors: ["#FFF", "#F5D0FE", "#FFC8D6"],
-                desc: "Ví clutch thanh lịch, hoàn hảo cho những bữa tiệc tối sang trọng."
-            },
-            {
-                id: 5, name: "Túi Xách Tay Aura", category: "crossbody",
+                id: 1, name: "Túi xách tay Aura size 18 - Xanh Mint", category: "handbag",
                 price: 1190000, originalPrice: 1590000,
                 image: "https://cdn.hstatic.net/products/200000978078/_bac3432_a2b6939f349542169a9e4ffe05808357_master.jpg",
-                tag: "Sale", colors: ["#4F9DFF", "#89C4FF", "#FFF"],
-                desc: "Túi đeo chéo thiết kế hiện đại, chất liệu da mềm, chống nước tốt."
+                tag: "Hot", colors: ["#B7E4D2", "#DFF5EA", "#7FBFA8"],
+                desc: "Mã SP: TXT2512138 | Chất liệu: Da PU cao cấp | Kích thước: 18 x 6 x 12 cm | Thiết kế: dáng hộp thanh lịch, khóa kéo kim loại 2 đầu với chi tiết hoa và trái tim, đính kèm charm hoa nữ tính, kèm 01 dây đeo chéo."
             },
             {
-                id: 6, name: "Balo Túi Hộp Ô Trám Chainy", category: "backpack",
-                price: 1490000, originalPrice: 2190000,
-                image: "https://cdn.hstatic.net/products/200000978078/_mg_6980_3faadd3320e748bb942623ced755e818_master.jpg",
-                tag: "Hot", colors: ["#FF6B8A", "#FF3D6B", "#333"],
-                desc: "Balo nữ phong cách Hàn Quốc, nhiều ngăn chứa đồ, đệm lưng êm ái."
+                id: 2, name: "Túi xách tay Aura size 18 - Kem", category: "handbag",
+                price: 1190000, originalPrice: 1590000,
+                image: "https://cdn.hstatic.net/products/200000978078/_bac3039_28d4e7f46d944a8c882ce50d2510479a_master.jpg",
+                tag: "Sale", colors: ["#F8F3E9", "#E7DBC8", "#CBBBA3"],
+                desc: "Mã SP: TXT2512138 | Chất liệu: Da PU cao cấp | Kích thước: 18 x 6 x 12 cm | Thiết kế: dáng hộp thanh lịch, khóa kéo kim loại 2 đầu với chi tiết hoa và trái tim, đính kèm charm hoa nữ tính, kèm 01 dây đeo chéo."
             },
             {
-                id: 7, name: "Túi Xách Tay Mini Dáng Hộp Lock Chic", category: "handbag",
-                price: 1390000, originalPrice: 1990000,
-                image: "https://cdn.hstatic.net/products/200000978078/_bac9414_e36330b4eaf3414b8aaa7b34f13ab8f9_master.jpg",
-                tag: "Mới", colors: ["#9B59B6", "#8E44AD", "#FFF"],
-                desc: "Túi xách tay cao cấp, thiết kế sang trọng với điểm nhấn kim loại vàng."
+                id: 3, name: "Túi Đeo Vai Đai Móc Cross Band Size 27", category: "crossbody",
+                price: 1290000, originalPrice: 1690000,
+                image: "https://cdn.hstatic.net/products/200000978078/_mg_7457_423cac2b0fb547ad8303284f87066764_master.jpg",
+                tag: "Mới", colors: ["#F5F5F4", "#D6D3D1", "#A8A29E"],
+                desc: "Mã SP: TDV25074 | Chất liệu: Da PU cao cấp | Kích thước: 27 x 13 x 8 cm | Thiết kế: phom hộp ngang dáng đứng giữ form tốt, dây đai vắt chéo tạo điểm nhấn tinh tế, quai mảnh hiện đại, tổng thể tối giản trang nhã."
             },
             {
-                id: 8, name: "Ví Dài Clara Hand Wallet", category: "clutch",
-                price: 590000, originalPrice: 890000,
-                image: "https://cdn.hstatic.net/products/200000978078/_bac7651_d885e5853f3b4da5994f3e27a1a70bde_master.jpg",
-                tag: "Sale", colors: ["#F5F0E8", "#D4C5A9", "#8B7355"],
-                desc: "Ví nữ nhỏ gọn với họa tiết tối giản, phong cách thanh lịch, hiện đại."
-            },
-            {
-                id: 9, name: "Túi Xách Tay Phủ Màu Tag Vuông", category: "handbag",
-                price: 1590000, originalPrice: 2290000,
-                image: "https://cdn.hstatic.net/products/200000978078/ph__m_u_5_c74e051321ee45b6998ef8f9e92bb53f_master.png",
-                tag: "Hot", colors: ["#111827", "#374151", "#9CA3AF"],
-                desc: "Túi xách tay gam màu đen sang trọng, phù hợp đi làm và dự tiệc."
-            },
-            {
-                id: 10, name: "Túi Xách Tay Phủ Màu Tag Vuông Size 21", category: "crossbody",
-                price: 1090000, originalPrice: 1490000,
-                image: "https://cdn.hstatic.net/products/200000978078/ph__m_u_4_88371a96141749c1943aaad16e1e4f5a_master.png",
-                tag: "Mới", colors: ["#F3E8D2", "#D6C3A5", "#7C6A52"],
-                desc: "Túi đeo chéo dáng hộp nhỏ gọn, dễ phối đồ cho phong cách hàng ngày."
-            },
-            {
-                id: 11, name: "Balo Nắp Gập Ô Trám Nova", category: "backpack",
-                price: 1690000, originalPrice: 2390000,
-                image: "https://cdn.hstatic.net/products/200000978078/d_p_n_i_1_7f7d7a5a41784fde9b64b931da4d72aa_master.png",
-                tag: "Sale", colors: ["#FF7AA2", "#FF4D8D", "#FFFFFF"],
-                desc: "Balo nữ cao cấp chống nước nhẹ, ngăn chứa rộng cho laptop và đồ cá nhân."
-            },
-            {
-                id: 12, name: "Ví Đeo Chéo Mini Squared Quilted Size 11", category: "clutch",
+                id: 4, name: "Ví Dài Đai Ngang Khóa Charm Size 19", category: "clutch",
                 price: 790000, originalPrice: 1090000,
-                image: "https://cdn.hstatic.net/products/200000978078/hapas110641_4bba1a7fe48a4dd7ac5967085db782cd_master.jpg",
-                tag: "Mới", colors: ["#E5E7EB", "#C4B5FD", "#F9FAFB"],
-                desc: "Clutch ánh kim nổi bật, tạo điểm nhấn tinh tế cho những buổi tiệc tối."
+                image: "https://cdn.hstatic.net/products/200000978078/_bac7597_20e37d11fdfa4f74a0a1b41bff4026dd_master.jpg",
+                tag: "Hot", colors: ["#A11D34", "#7F1D1D", "#F9A8D4"],
+                desc: "Mã SP: VD251280 | Chất liệu: Da PU cao cấp | Kích thước: 19 x 10 x 4 cm | Thiết kế: phom chữ nhật chỉn chu, đai ngang và ổ khóa mang ý nghĩa chiêu lộc, ngăn chứa rộng rãi, khóa bấm kim loại chắc chắn."
             },
             {
-                id: 13, name: "Ví Card Nắp Gập Silver Chain", category: "clutch",
+                id: 5, name: "Túi Đeo Vai Hobo Đai Chéo Cozy Size 24", category: "crossbody",
+                price: 1190000, originalPrice: 1590000,
+                image: "https://product.hstatic.net/200000978078/product/hapas_6-4-7364_128921731a2145809cdee45a0d6420cc_master.jpg",
+                tag: "Sale", colors: ["#8BA7C9", "#6C8DB2", "#DCE7F3"],
+                desc: "Mã SP: TDV250361 | Chất liệu: Da PU cao cấp và Denim thật | Kích thước: 24 x 12 x 6 cm | Thiết kế: dáng hobo đáy bo tròn độc đáo, quai đeo mềm mại điều chỉnh độ dài, khóa kéo kim loại sang trọng."
+            },
+            {
+                id: 6, name: "Túi Tote Đai Ngang Ivy Size 34 - Kem", category: "tote",
+                price: 1490000, originalPrice: 1990000,
+                image: "https://cdn.hstatic.net/products/200000978078/1.1__2__a7231a2c5fc94d73ba8e58954927f92d_master.jpg",
+                tag: "Hot", colors: ["#EEE4CF", "#DCCFB4", "#BFAF90"],
+                desc: "Mã SP: TOT250613 | Chất liệu: Da PU cao cấp | Kích thước: 34 x 26 x 11 cm | Thiết kế: tối giản hiện đại, ngăn chứa rộng với 1 ngăn kéo giữa và 2 ngăn bên, khóa nam châm tiện lợi, quai đeo mềm mại thanh lịch."
+            },
+            {
+                id: 7, name: "Túi Xách Tay Candy Size 18 - Jean", category: "handbag",
+                price: 1290000, originalPrice: 1790000,
+                image: "https://cdn.hstatic.net/products/200000978078/_bac7722_d46c97dacb66445eafc7e75126afda94_master.jpg",
+                tag: "Mới", colors: ["#8AA6C7", "#5A7FA6", "#D8E4EF"],
+                desc: "Mã SP: TXT2601140 | Chất liệu: Da PU cao cấp | Kích thước: 18 x 8 x 11 cm | Thiết kế: phom baguette thanh lịch, ngăn chứa rộng rãi, đính kèm charm kim loại cá tính, kèm 01 dây đeo chéo linh hoạt."
+            },
+            {
+                id: 8, name: "Ví Ngắn Đai Ngang Charm Size 11", category: "clutch",
+                price: 590000, originalPrice: 850000,
+                image: "https://cdn.hstatic.net/products/200000978078/1_0615730c408b4c81bf1df57b18aab10d_master.png",
+                tag: "Sale", colors: ["#F8F5EE", "#E7DED0", "#CFC1AA"],
+                desc: "Mã SP: VN2512101 | Chất liệu: Da PU cao cấp | Kích thước: 11 x 3 x 9 cm | Thiết kế: phom chữ nhật gập gọn, đai ngang phối kim loại và charm trẻ trung, khóa bấm tiện lợi chắc chắn."
+            },
+            {
+                id: 9, name: "Túi Xách Tay Phủ Màu Tag Vuông Size 21 - Trắng", category: "handbag",
+                price: 1090000, originalPrice: 1490000,
+                image: "https://product.hstatic.net/200000978078/product/img_8059_05e9a019d8d74c71a4522f137a5ee702_master.jpg",
+                tag: "Hot", colors: ["#FFFFFF", "#F3F4F6", "#D1D5DB"],
+                desc: "Mã SP: TXT221226 | Chất liệu: Da PU cao cấp | Kích thước: 21 x 8 x 13 cm | Thiết kế: form thanh lịch gọn gàng, 01 ngăn chính khóa kéo tiện lợi, kèm 01 dây đeo tháo rời, tag vuông đặc biệt."
+            },
+            {
+                id: 10, name: "Túi Đeo Vai Hobo Đáy Vuông Love Charm Size 23", category: "crossbody",
+                price: 1090000, originalPrice: 1490000,
+                image: "https://cdn.hstatic.net/products/200000978078/4_550476784fac4373b55ffdbfe2ab338a_master.png",
+                tag: "Mới", colors: ["#7BA2C7", "#5F86AD", "#D6E4F2"],
+                desc: "Mã SP: TDV240358 | Chất liệu: Da PU và vải jean cao cấp | Kích thước: 23 x 7 x 16 cm | Thiết kế: đáy vuông hình thang cá tính, đính kèm ví mini trái tim và 01 gương soi, quai xích phối da."
+            },
+            {
+                id: 11, name: "Túi Tote Dập Nổi Camel Size 33 - Nâu", category: "tote",
+                price: 1690000, originalPrice: 2390000,
+                image: "https://cdn.hstatic.net/products/200000978078/6.1_14268712d6d54ea2ab87500642193ad9_master.jpg",
+                tag: "Sale", colors: ["#8B5A3C", "#6B4226", "#B27A5A"],
+                desc: "Mã SP: TOT250697 | Chất liệu: Da PU cao cấp | Kích thước: 33 x 28 x 10 cm | Thiết kế: form cứng cáp dễ phối đồ công sở, 01 ngăn chính rộng, khóa nam châm tiện lợi, quai bản vừa điều chỉnh được, logo HAPAS dập nổi hiện đại."
+            },
+            {
+                id: 12, name: "Ví Ngắn Đai Ngang Jody Size 11", category: "clutch",
+                price: 790000, originalPrice: 1090000,
+                image: "https://cdn.hstatic.net/products/200000978078/6_413bb8e863574ec0831188555adc52ae_master.jpg",
+                tag: "Mới", colors: ["#EEE8DD", "#D8CAB6", "#BFA78F"],
+                desc: "Mã SP: VN25093 | Chất liệu: Vải Tweed cao cấp | Kích thước: 11 x 3 x 9 cm | Thiết kế: form nhỏ gọn thanh lịch, nắp gập gọn gàng, dải trang trí đồng chất kèm logo mạ vàng và charm khóa tinh xảo."
+            },
+            {
+                id: 13, name: "Ví Gập Đeo Chéo Darling Size 11", category: "clutch",
                 price: 1490000, originalPrice: 2090000,
-                image: "https://product.hstatic.net/200000978078/product/20241220_y7bu1f5rca_f39dd244cf1f40999cfaf854b20d824b_master.jpeg",
-                tag: "Hot", colors: ["#7C4A2D", "#A16207", "#EAB308"],
-                desc: "Túi xách dáng cổ điển với chất liệu da vân mềm, tôn lên nét thanh lịch."
+                image: "https://cdn.hstatic.net/products/200000978078/_bac3370_8834a890253c4787abf71cc8931189b5_master.jpg",
+                tag: "Hot", colors: ["#F8D4DB", "#F1B7C2", "#D77F93"],
+                desc: "Mã SP: VN2512100 | Chất liệu: Da PU cao cấp | Kích thước: 11 x 1 x 9 cm | Thiết kế: phom envelope vạt chéo độc đáo, charm chữ ký HAPAS tinh tế, khóa bấm chắc chắn, đính kèm 01 dây đeo chéo kim loại."
             },
             {
-                id: 14, name: "Ví Dài Happiness Hand Wallet", category: "clutch",
+                id: 14, name: "Túi Đeo Vai Đai Ngang Cchic Size 21", category: "crossbody",
                 price: 980000, originalPrice: 1390000,
-                image: "https://cdn.hstatic.net/products/200000978078/_bac1585_63f29d22c8f944b981d4f7a97c116831_master.jpg",
-                tag: "Sale", colors: ["#FFFFFF", "#F3F4F6", "#D1D5DB"],
-                desc: "Túi đeo chéo trẻ trung với dây bản nhỏ, thích hợp dạo phố cuối tuần."
+                image: "https://cdn.hstatic.net/products/200000978078/49_56edfa5f05b448e28fd435bd429df67a_master.png",
+                tag: "Sale", colors: ["#BFE8D8", "#A8D9C6", "#8EBFAF"],
+                desc: "Mã SP: TDV23056 | Chất liệu: Da PU cao cấp | Kích thước: 21 x 6 x 13 cm | Thiết kế: 01 ngăn chính tiện lợi, phom chữ nhật bo góc mềm mại, khóa C bản lớn thanh lịch, quai xách ngắn liền túi phối da và xích kim loại."
             },
             {
-                id: 15, name: "Balo Yuumy", category: "backpack",
+                id: 15, name: "Túi Tote Đai Móc Amee Size 35 - Kem", category: "tote",
                 price: 1390000, originalPrice: 1890000,
-                image: "https://cdn.hstatic.net/products/200000060646/4_5b190fdbe6824a5ba9455b42508e32b6_master.jpg",
-                tag: "Mới", colors: ["#9CA3AF", "#6B7280", "#1F2937"],
-                desc: "Balo tối giản, nhẹ và bền, phù hợp cho công việc và di chuyển thường xuyên."
+                image: "https://cdn.hstatic.net/products/200000978078/10.1_94a54c499a584e789c7356c239b840e6_master.jpg",
+                tag: "Mới", colors: ["#EEE5D2", "#D8CCB3", "#BFAE8E"],
+                desc: "Mã SP: TOT250622 | Chất liệu: Da PU cao cấp | Kích thước: 35 x 28 x 10 cm | Thiết kế: form dáng dome mái vòm hiện đại, dây đai khóa gài cổ điển, khóa nam châm tiện lợi."
             },
             {
-                id: 16, name: "Túi Xách Tay Quai Đôi Dáng Hộp Quinx", category: "handbag",
-                price: 650000, originalPrice: 930000,
-                image: "https://cdn.hstatic.net/products/200000978078/z7328315634391_bfc0e0d327a7905989e4ad07aa41ecdb_bf52e8f47acb4f05ad062e61e2271bee_master.jpg",
-                tag: "Sale", colors: ["#F9A8D4", "#F472B6", "#BE185D"],
-                desc: "Ví clutch cầm tay gọn nhẹ với gam màu hồng nổi bật, nữ tính và hiện đại."
+                id: 19, name: "Túi Đeo Vai Quai Đôi Tag Tròn Size 24", category: "crossbody",
+                price: 1290000, originalPrice: 1690000,
+                image: "https://product.hstatic.net/200000978078/product/1.3_09aa40a17a6248f78fb0b3b297a22457_master.jpg",
+                tag: "Hot", colors: ["#C9D8EB", "#A7BCD7", "#E9EFF7"],
+                desc: "Mã SP: TDV240151 | Chất liệu: Da PU cao cấp | Kích thước: 24 x 7 x 21 cm | Thiết kế: form mềm bo nhẹ ở đáy và xếp ly miệng túi, quai đeo kim loại kèm tag tròn độc đáo, ngăn chứa rộng rãi."
+            },
+            {
+                id: 20, name: "Túi Đeo Vai Hobbo Đáy Tròn Size 22", category: "crossbody",
+                price: 1090000, originalPrice: 1490000,
+                image: "https://product.hstatic.net/200000978078/product/img_0306_a7c03d649a854b8e86c948cbcb03078f_master.jpg",
+                tag: "Sale", colors: ["#F7F4EC", "#E7DDCF", "#BFAF98"],
+                desc: "Mã SP: TDV221019 | Chất liệu: Da PU cao cấp (có sản phẩm da lộn) | Kích thước: 22 x 12 x 6 cm | Thiết kế: đáy tròn hiện đại dễ phối đồ, khóa bấm kim loại nổi bật, form bo tròn mềm mại ôm sát người khi đeo."
+            },
+            {
+                id: 21, name: "Túi Đeo Vai Đai Dài Bubbly Size 26", category: "crossbody",
+                price: 1190000, originalPrice: 1590000,
+                image: "https://cdn.hstatic.net/products/200000978078/35_832df295d5b440a48be183f29994c381_master.png",
+                tag: "Mới", colors: ["#EFE4CE", "#DCC9AA", "#B89F77"],
+                desc: "Mã SP: TDV250364 | Chất liệu: Da PU cao cấp và Denim thật | Kích thước: 26 x 10 x 10 cm | Thiết kế: dáng chữ nhật ngang bo nhẹ, quai dài bản nhỏ độc đáo, ngăn chứa rộng rãi cho vật dụng cần thiết."
+            },
+            {
+                id: 22, name: "Túi Tote Da Thật Đai Móc Katie Size 34 - Nâu", category: "tote",
+                price: 2190000, originalPrice: 2790000,
+                image: "https://cdn.hstatic.net/products/200000978078/_bac9875_0bcd744d1f79409a9aa8e2e1609a6c0c_master.jpg",
+                tag: "Hot", colors: ["#9E6B4D", "#7D4E33", "#C18A6A"],
+                desc: "Mã SP: TOT2508 | Chất liệu: Da thật cao cấp | Kích thước: 34 x 23 x 13 cm | Thiết kế: đường may tỉ mỉ, chi tiết kim loại ánh vàng sang trọng, form tối giản thanh thoát cân đối, charm thương hiệu HAPAS tạo điểm nhấn."
+            },
+            {
+                id: 23, name: "Túi Tote Quai Tròn Hearty Size 35 - Kem", category: "tote",
+                price: 1590000, originalPrice: 2090000,
+                image: "https://cdn.hstatic.net/products/200000978078/9.1_aa64439d16a6477ea8a374260eda7a4e_master.jpg",
+                tag: "Sale", colors: ["#EFE2C8", "#DCC8A8", "#BCA27C"],
+                desc: "Mã SP: TOT25063 | Chất liệu: Da PU cao cấp | Kích thước: 35 x 26 x 10 cm | Thiết kế: form bán định hình giữ dáng ổn định, khóa kéo kim loại tiện dụng, ngăn chứa rộng rãi, quai đeo mềm mại nữ tính, charm trái tim tạo điểm nhấn."
+            },
+            {
+                id: 16, name: "Túi Xách Tay Charm Tim Dearie Size 23 - Nâu", category: "handbag",
+                price: 1390000, originalPrice: 1890000,
+                image: "https://cdn.hstatic.net/products/200000978078/_mg_8434_b88cdbbb03504f3f9eca0999aa92c9a3_master.jpg",
+                tag: "Sale", colors: ["#5B4332", "#8B6A52", "#D4B8A0"],
+                desc: "Mã SP: TXT250736 | Chất liệu: Da PU cao cấp | Kích thước: 23 x 12 x 8 cm | Thiết kế: phom mini vòm nhỏ gọn, charm kim loại tinh tế, tay cầm cứng cáp, khóa kéo kim loại chắc chắn, kèm 01 dây đeo chéo."
+            },
+            {
+                id: 17, name: "Túi Xách Tay Phủ Màu Tag Vuông Size 21 - Trắng", category: "handbag",
+                price: 1090000, originalPrice: 1490000,
+                image: "https://cdn.hstatic.net/products/200000978078/_bac4702_4b0ffceeeba0473a96c10a420d1baef6_master.jpg",
+                tag: "Hot", colors: ["#FFFFFF", "#F3F4F6", "#D1D5DB"],
+                desc: "Mã SP: TXT221226 | Chất liệu: Da PU cao cấp | Kích thước: 21 x 8 x 13 cm | Thiết kế: form thanh lịch gọn gàng, 01 ngăn chính khóa kéo tiện lợi, kèm 01 dây đeo tháo rời, tag vuông đặc biệt."
+            },
+            {
+                id: 18, name: "Túi Xách Tay Khoen Vuông Đáy Tròn Cerleen Size 22 - Bạc Gương", category: "handbag",
+                price: 1490000, originalPrice: 1990000,
+                image: "https://product.hstatic.net/200000978078/product/_mg_4714_248166ff5567445daa68df5cff84d2f7_master.jpg",
+                tag: "Mới", colors: ["#D9D9D9", "#BFC5CC", "#F4F5F7"],
+                desc: "Mã SP: TXT241012 | Chất liệu: Da PU cao cấp | Kích thước: 22 x 12 x 5 cm | Thiết kế: đáy bo tròn độc đáo, khóa kim loại sang trọng, bề mặt sáng bóng phản chiếu ấn tượng, dây đeo điều chỉnh linh hoạt."
+            },
+            {
+                id: 24, name: "Bộ Quà Tặng Túi Xách Tag G Hộp Chân Thành 2026 - Trắng", category: "combo-set",
+                price: 2190000, originalPrice: 2790000,
+                image: "https://cdn.hstatic.net/products/200000978078/_bac3305_048257de1af14d378fdb380f73a098df_master.jpg",
+                tag: "Hot", colors: ["#F7F3ED", "#E7DDD2", "#C9B8A4"],
+                desc: "Mã SP: CXT2511129 | Chất liệu: Da PU cao cấp | Kích thước: Full set quà tặng | Thiết kế: gồm 01 túi giấy đi kèm, 01 hộp âm dương họa tiết hoa, bên trong có Túi Tag G size 24 và charm khăn, 01 khăn lụa 70 x 70 cm kèm ghim cài khăn, 01 nước hoa 30ml, thiệp điện tử; tổng thể là set quà tặng trang trọng cho dịp 14/2 và 8/3."
+            },
+            {
+                id: 25, name: "Bộ Quà Tặng Túi Xách Phủ Màu Hộp Thân Thương 2026 - Hồng", category: "combo-set",
+                price: 2290000, originalPrice: 2890000,
+                image: "https://cdn.hstatic.net/products/200000978078/_bac3364_6b7f1ac62d8e4cc3906303decc84b8fb_master.jpg",
+                tag: "Sale", colors: ["#F8C6D4", "#F2AFC3", "#E58CA9"],
+                desc: "Mã SP: CXT2511130 | Chất liệu: Da PU cao cấp | Kích thước: Full set quà tặng | Thiết kế: gồm 01 túi giấy đi kèm, 01 hộp mở 2 cánh họa tiết hoa cắt laser, bên trong có Túi Phủ Màu size 21, 01 ví đồng màu kèm dây đeo chéo, 01 nước hoa bọc da dập logo HAPAS, thiệp điện tử; phù hợp quà tặng 8/3 và 14/2."
+            },
+            {
+                id: 26, name: "Bộ Quà Tặng Túi Xách Tidy Hộp Yêu Yêu - Đen", category: "combo-set",
+                price: 1990000, originalPrice: 2590000,
+                image: "https://cdn.hstatic.net/products/200000978078/_mg_9584_e8c6b40f72fa461b89cd4678386d1e33_master.jpg",
+                tag: "Mới", colors: ["#2F2F33", "#44444A", "#7D7D85"],
+                desc: "Mã SP: CXT2508103 | Chất liệu: Da PU cao cấp | Kích thước: Full set quà tặng | Thiết kế: gồm 01 túi giấy đi kèm, 01 hộp 2 tầng; tầng trên mở 2 cánh có 3 lọ nước hoa 30ml (hồng/vàng/xanh), tầng dưới có 01 túi Tidy size 22cm, kèm thiệp điện tử và giấy hướng dẫn sử dụng thiệp; phù hợp dịp 14/2, 8/3, 20/10."
+            },
+            {
+                id: 27, name: "Bộ Quà Tặng Mini Túi Xách Hobo Love Charm Jean", category: "combo-set",
+                price: 1890000, originalPrice: 2390000,
+                image: "https://cdn.hstatic.net/products/200000978078/3_75cb36c6166a4da6ad4f3146789cf60b_master.png",
+                tag: "Hot", colors: ["#6E92B8", "#4D6E94", "#C7D7E8"],
+                desc: "Mã SP: CDV2602106-DN | Chất liệu: Da PU cao cấp | Kích thước: Full set quà tặng | Thiết kế: gồm 01 túi giấy đi kèm, 01 hộp âm dương sang trọng, bên trong có Túi Hobo Love Charm size 23, ví cùng màu, thiệp điện tử; set quà phù hợp những dịp đặc biệt."
+            },
+            {
+                id: 28, name: "Bộ Quà Tặng Túi Xách Mini Hộp Thích Thích 2025 - Trắng", category: "combo-set",
+                price: 1790000, originalPrice: 2290000,
+                image: "https://cdn.hstatic.net/products/200000978078/5_ad2696a4239e4237ac7e22d39f53ac1d_master.png",
+                tag: "Sale", colors: ["#F5EEE2", "#E4D5BE", "#CBB694"],
+                desc: "Mã SP: CXT2508105 | Chất liệu: Da PU cao cấp | Kích thước: Full set quà tặng | Thiết kế: gồm 01 túi giấy đi kèm, 01 hộp nắp đẩy với Túi TXT Hobo quai xích Moon Chic size 16, 01 ví gập đai chéo Lover, 01 nước hoa Florie 10ml, 01 thiệp điện tử, 01 giấy hướng dẫn sử dụng thiệp; thích hợp quà tặng Valentine, 8/3, 20/10."
             }
         ];
 
@@ -1430,6 +1564,47 @@
             return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(price);
         }
 
+        function formatProductDesc(desc = '') {
+            const parts = desc.split('|').map(part => part.trim()).filter(Boolean);
+            const getValue = (label) => {
+                const item = parts.find(part => part.toLowerCase().startsWith(label.toLowerCase()));
+                return item ? item.slice(label.length).trim() : '';
+            };
+
+            const productCode = getValue('Mã SP:');
+            const material = getValue('Chất liệu:');
+            const size = getValue('Kích thước:') || getValue('Size túi:');
+            const designRaw = getValue('Thiết kế:');
+
+            const designItems = designRaw
+                ? designRaw.split(',').map(item => item.trim()).filter(Boolean)
+                : [];
+
+            const infoRows = [
+                productCode ? `<p><span class="font-semibold text-gray-700">Mã SP:</span> ${productCode}</p>` : '',
+                material ? `<p><span class="font-semibold text-gray-700">Chất liệu:</span> ${material}</p>` : '',
+                size ? `<p><span class="font-semibold text-gray-700">Kích thước:</span> ${size}</p>` : ''
+            ].filter(Boolean).join('');
+
+            if (!infoRows && designItems.length === 0) {
+                return `<p class="text-gray-600 leading-relaxed">${desc}</p>`;
+            }
+
+            return `
+                <div class="space-y-3 text-sm text-gray-600 leading-relaxed">
+                    <div class="space-y-1.5">${infoRows}</div>
+                    ${designItems.length > 0 ? `
+                        <div>
+                            <p class="font-semibold text-gray-700 mb-1.5">Thiết kế:</p>
+                            <ul class="space-y-1">
+                                ${designItems.map(item => `<li class="flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-pink-400 shrink-0"></span><span>${item}</span></li>`).join('')}
+                            </ul>
+                        </div>
+                    ` : ''}
+                </div>
+            `;
+        }
+
         function filterProducts(filter) {
             currentFilter = filter;
             if (filter !== 'all') {
@@ -1452,6 +1627,18 @@
             const searchInput = document.getElementById('search-input');
             if (searchInput) searchInput.value = '';
             filterProducts(category);
+            const productsSection = document.getElementById('products');
+            if (productsSection) {
+                productsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        function openProductGroup(filter) {
+            currentSearch = '';
+            const searchInput = document.getElementById('search-input');
+            if (searchInput) searchInput.value = '';
+            isShowingAllProducts = true;
+            filterProducts(filter);
             const productsSection = document.getElementById('products');
             if (productsSection) {
                 productsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -1677,7 +1864,7 @@
                                 -${Math.round((1 - product.price/product.originalPrice) * 100)}%
                             </span>
                         </div>
-                        <p class="text-gray-600 mb-4 leading-relaxed">${product.desc}</p>
+                        <div class="mb-4">${formatProductDesc(product.desc)}</div>
                         <div class="mb-4">
                             <p class="text-sm font-semibold text-gray-700 mb-2">Màu sắc:</p>
                             <div class="flex gap-2">
@@ -1847,6 +2034,70 @@
             }
         }
 
+        // ===== HERO SLIDER =====
+        function initHeroSlider() {
+            const slider = document.getElementById('hero-slider');
+            if (!slider) return;
+            const slides = Array.from(slider.querySelectorAll('[data-hero-bg]'));
+            const dots = Array.from(document.querySelectorAll('[data-hero-dot]'));
+            const prevBtn = document.getElementById('hero-prev');
+            const nextBtn = document.getElementById('hero-next');
+            const heroMainContent = document.getElementById('hero-main-content');
+            if (slides.length <= 1) return;
+
+            let activeIndex = 0;
+            let autoTimer = null;
+
+            function render(index) {
+                activeIndex = (index + slides.length) % slides.length;
+                slides.forEach((slide, idx) => {
+                    slide.classList.toggle('opacity-0', idx !== activeIndex);
+                });
+                dots.forEach((dot, idx) => {
+                    dot.classList.toggle('bg-pink-500', idx === activeIndex);
+                    dot.classList.toggle('bg-pink-200', idx !== activeIndex);
+                });
+                if (heroMainContent) {
+                    const shouldShowContent = activeIndex === 0;
+                    heroMainContent.classList.toggle('opacity-0', !shouldShowContent);
+                    heroMainContent.classList.toggle('pointer-events-none', !shouldShowContent);
+                }
+            }
+
+            function startAutoSlide() {
+                if (autoTimer) clearInterval(autoTimer);
+                autoTimer = setInterval(() => render(activeIndex + 1), 5000);
+            }
+
+            function stopAutoSlide() {
+                if (autoTimer) clearInterval(autoTimer);
+            }
+
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => {
+                    render(activeIndex - 1);
+                    startAutoSlide();
+                });
+            }
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => {
+                    render(activeIndex + 1);
+                    startAutoSlide();
+                });
+            }
+            dots.forEach((dot, idx) => {
+                dot.addEventListener('click', () => {
+                    render(idx);
+                    startAutoSlide();
+                });
+            });
+            slider.addEventListener('mouseenter', stopAutoSlide);
+            slider.addEventListener('mouseleave', startAutoSlide);
+
+            render(0);
+            startAutoSlide();
+        }
+
         // ===== COUNTDOWN =====
         function startCountdown() {
             let totalSeconds = 12 * 3600 + 45 * 60 + 30;
@@ -1932,6 +2183,7 @@
             isShowingAllProducts = false;
             filterProducts('all');
             startCountdown();
+            initHeroSlider();
             initScrollAnimations();
             initBackToTop();
             const showAllBtn = document.getElementById('show-all-products-btn');
